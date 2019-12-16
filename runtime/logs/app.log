@@ -872,3 +872,81 @@ $_SERVER = [
     'argv' => []
     'argc' => 0
 ]
+2019-12-16 18:12:35 [127.0.0.1][100][733vo7nmrtlcsek5u1im4tc6875ud58e][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Owner::name in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('name')
+#1 C:\OSPanel\domains\localhost\ipets\views\owner\view.php(9): yii\db\BaseActiveRecord->__get('name')
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\OwnerController))
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(app\controllers\OwnerController))
+#6 C:\OSPanel\domains\localhost\ipets\controllers\OwnerController.php(59): yii\base\Controller->render('view', Array)
+#7 [internal function]: app\controllers\OwnerController->actionView('1')
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#11 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('owner/view', Array)
+#12 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#14 {main}
+2019-12-16 18:12:35 [127.0.0.1][100][733vo7nmrtlcsek5u1im4tc6875ud58e][info][application] $_GET = [
+    'r' => 'owner/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '733vo7nmrtlcsek5u1im4tc6875ud58e'
+    '_csrf' => '5fe5861f0c8c4933b84dbf46e8e45a44ae806207c95d5778f984cb2bfeec03bba:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"dr9ksqJfo3GkLNlw2WBk6XoVrLS5jVAm\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=owner%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=733vo7nmrtlcsek5u1im4tc6875ud58e; _csrf=5fe5861f0c8c4933b84dbf46e8e45a44ae806207c95d5778f984cb2bfeec03bba%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22dr9ksqJfo3GkLNlw2WBk6XoVrLS5jVAm%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2898'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=owner%2Fview&id=1'
+    'REQUEST_URI' => '/index.php?r=owner%2Fview&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576509155.119
+    'REQUEST_TIME' => 1576509155
+    'argv' => [
+        0 => 'r=owner%2Fview&id=1'
+    ]
+    'argc' => 1
+]

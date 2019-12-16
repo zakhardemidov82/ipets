@@ -4,14 +4,14 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model app\models\Pets */
+/* @var $model app\models\Owner */
 
-$this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Pets', 'url' => ['index']];
+$this->title = $model->last_name;
+$this->params['breadcrumbs'][] = ['label' => 'Владельцы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="pets-view">
+<div class="owner-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -29,25 +29,24 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-            /*'id',*/
-            'breedId',
-            'name',
-            'colorId',
-            'ownerId',
-            'dob',
-            'genderId',
-            'pedigree_number',
-            'number_KSU',
-            'number_FCI',
-            'registration_club',
-            'breeding_club',
+           /* 'id',*/
+            'last_name',
+            'first_name',
+            'middle_name',
+            'adres_index',
+            'city',
+            'street',
+            'house',
+            'flat',
+            'phone_home',
+            'phone_work',
+            'email:email',
+            'site',
+            'date_of_entry',
+            'cipher_in_the_breeding_factory',
+            'KSU_code',
             'comments:ntext',
-            'father',
-            'mother',
-            'dignityId',
-            'awardsId',
-            'puppy_card_number',
-            'participation_in_the_exhibition',
+            'petsId',
         ],
     ]) ?>
 

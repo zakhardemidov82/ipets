@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Создать карточку', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать карточку питомца', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 
@@ -23,13 +23,13 @@ $this->params['breadcrumbs'][] = $this->title;
         'columns' => [
             ['class' => 'yii\grid\SerialColumn'],
 
-            'id',
+            /*'id',*/
             'breedId',
             'name',
             'colorId',
             'ownerId',
             //'dob',
-            //'genderId',
+            'genderId',
             //'pedigree_number',
             //'number_KSU',
             //'number_FCI',
