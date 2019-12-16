@@ -78,8 +78,14 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            if($model->getUser()->accessToken === 'admin') {
+            if($model->getUser()->accessToken === '100-token') {
                 return $this->redirect(Url::toRoute(['admin/index']));
+            }
+            if($model->getUser()->accessToken === '101-token') {
+                return $this->redirect(Url::toRoute(['pets/index']));
+            }
+            else {
+                return $this->redirect(Url::toRoute(['owner/index']));
             }
         }
 

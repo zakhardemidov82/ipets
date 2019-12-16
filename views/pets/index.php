@@ -6,7 +6,7 @@ use yii\grid\GridView;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Pets';
+$this->title = 'Питомцы';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="pets-index">
@@ -14,7 +14,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Create Pets', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Создать карточку', ['create'], ['class' => 'btn btn-success']) ?>
     </p>
 
 

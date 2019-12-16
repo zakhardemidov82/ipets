@@ -1,0 +1,874 @@
+2019-12-16 16:26:41 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin/index". in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/index', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-16 16:26:41 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z\";}'
+    'PHPSESSID' => 'mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z%22%3B%7D; PHPSESSID=mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '1620'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Findex'
+    'REQUEST_URI' => '/index.php?r=admin%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576502801.413
+    'REQUEST_TIME' => 1576502801
+    'argv' => [
+        0 => 'r=admin%2Findex'
+    ]
+    'argc' => 1
+]
+2019-12-16 16:27:24 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin/index". in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/index', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-16 16:27:24 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z\";}'
+    'PHPSESSID' => 'mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z%22%3B%7D; PHPSESSID=mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '1631'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Findex'
+    'REQUEST_URI' => '/index.php?r=admin%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576502844.593
+    'REQUEST_TIME' => 1576502844
+    'argv' => [
+        0 => 'r=admin%2Findex'
+    ]
+    'argc' => 1
+]
+2019-12-16 16:27:58 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "admin/index". in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('admin/index', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-16 16:27:58 [127.0.0.1][-][mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3][info][application] $_GET = [
+    'r' => 'admin/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z\";}'
+    'PHPSESSID' => 'mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d1fdbfde79675d70ffe3c4ad765ba1e7d31b71ad48eabe1b15a79c6432c5edeea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xRdnqOYB06FLPnCGmCSwQZAj6dDfiZ3z%22%3B%7D; PHPSESSID=mpdk0kk6b6r7ea17ubrtkvm3lv7g1kd3'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '1644'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=admin%2Findex'
+    'REQUEST_URI' => '/index.php?r=admin%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576502878.712
+    'REQUEST_TIME' => 1576502878
+    'argv' => [
+        0 => 'r=admin%2Findex'
+    ]
+    'argc' => 1
+]
+2019-12-16 16:55:42 [127.0.0.1][-][a4gq0p199duqe0321mjqb9av8ktj6j48][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Hash is invalid. in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Security.php:651
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\models\User.php(75): yii\base\Security->validatePassword('123', '123')
+#1 C:\OSPanel\domains\localhost\ipets\models\LoginForm.php(50): app\models\User->validatePassword('123')
+#2 [internal function]: app\models\LoginForm->validatePassword('password', NULL, Object(yii\validators\InlineValidator))
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\validators\InlineValidator.php(72): call_user_func(Array, 'password', NULL, Object(yii\validators\InlineValidator))
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\validators\Validator.php(257): yii\validators\InlineValidator->validateAttribute(Object(app\models\LoginForm), 'password')
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Model.php(367): yii\validators\Validator->validateAttributes(Object(app\models\LoginForm), Array)
+#6 C:\OSPanel\domains\localhost\ipets\models\LoginForm.php(62): yii\base\Model->validate()
+#7 C:\OSPanel\domains\localhost\ipets\controllers\SiteController.php(80): app\models\LoginForm->login()
+#8 [internal function]: app\controllers\SiteController->actionLogin()
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#10 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('login', Array)
+#12 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('site/login', Array)
+#13 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#15 {main}
+2019-12-16 16:55:42 [127.0.0.1][-][a4gq0p199duqe0321mjqb9av8ktj6j48][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = [
+    '_csrf' => 'xTHdGGwIUoY6OMSSBr3E06caXtDw-IZ1NSuMk2qWtqKVY5BwFkIYxwpSvv009JuX63M5vsiusyxTU73iPM7v-g=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => '123'
+        'rememberMe' => '0'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '35b236f4817856cc3ce71c197e8420dd799c21592088a758098fa437d1b8dbd7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PRMhzJJA0jzo2I_DLign8V5Yfx1qVXYX\";}'
+    'PHPSESSID' => 'a4gq0p199duqe0321mjqb9av8ktj6j48'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '198'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://ipets'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=35b236f4817856cc3ce71c197e8420dd799c21592088a758098fa437d1b8dbd7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PRMhzJJA0jzo2I_DLign8V5Yfx1qVXYX%22%3B%7D; PHPSESSID=a4gq0p199duqe0321mjqb9av8ktj6j48'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2019'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576504542.464
+    'REQUEST_TIME' => 1576504542
+    'argv' => [
+        0 => 'r=site%2Flogin'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:01:54 [127.0.0.1][100][grvb80pgm7irc7la0g9po4efo14sji0s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "owner/index". in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('owner/index', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-16 17:01:54 [127.0.0.1][100][grvb80pgm7irc7la0g9po4efo14sji0s][info][application] $_GET = [
+    'r' => 'owner/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'grvb80pgm7irc7la0g9po4efo14sji0s'
+    '_csrf' => '3e976bbedfa83f8f41aa13c4bede344e425108ed48673962a66307d1992b073aa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Aimp8MPislipGyPqxhf_sIDAjlfziSpH\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=pets%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=grvb80pgm7irc7la0g9po4efo14sji0s; _csrf=3e976bbedfa83f8f41aa13c4bede344e425108ed48673962a66307d1992b073aa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Aimp8MPislipGyPqxhf_sIDAjlfziSpH%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2104'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=owner%2Findex'
+    'REQUEST_URI' => '/index.php?r=owner%2Findex'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576504914.856
+    'REQUEST_TIME' => 1576504914
+    'argv' => [
+        0 => 'r=owner%2Findex'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:05:34 [127.0.0.1][100][goersckkku9k3u44ssi0pjgqu9929h7k][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '123' for column 'dob' at row 1 in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Command.php:1290
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Command.php(1290): PDOStatement->execute()
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `pe...')
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('pets', Array)
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel\domains\localhost\ipets\controllers\PetsController.php(68): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PetsController->actionCreate()
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pets/create', Array)
+#12 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '123' for column 'dob' at row 1
+The SQL being executed was: INSERT INTO `pets` (`breedId`, `name`, `colorId`, `ownerId`, `dob`, `genderId`, `pedigree_number`, `number_KSU`, `number_FCI`, `registration_club`, `breeding_club`, `comments`, `father`, `mother`, `dignityId`, `awardsId`, `puppy_card_number`, `participation_in_the_exhibition`) VALUES (2, 'Сашка', 2, 3, '123', 1, 1, 1, 1, '1', '1', 'Пробный шар', 1, 2, 3, 2, 1, 1) in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Schema.php:674
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `pe...')
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `pe...')
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\Schema.php(432): yii\db\Command->execute()
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\ActiveRecord.php(600): yii\db\Schema->insert('pets', Array)
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 C:\OSPanel\domains\localhost\ipets\controllers\PetsController.php(68): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PetsController->actionCreate()
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('create', Array)
+#11 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pets/create', Array)
+#12 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '123' for column 'dob' at row 1
+)
+
+2019-12-16 17:05:34 [127.0.0.1][100][goersckkku9k3u44ssi0pjgqu9929h7k][info][application] $_GET = [
+    'r' => 'pets/create'
+]
+
+$_POST = [
+    '_csrf' => 'uEhFoXA875fhDnKdWBYh7RMtcP5ZWErOvPpAe8JTuHjODSPLQgSM_L44F84bU0OdXkYUh3RqKKGNojQJrifhHA=='
+    'Pets' => [
+        'breedId' => '2'
+        'name' => 'Сашка'
+        'colorId' => '2'
+        'ownerId' => '3'
+        'dob' => '123'
+        'genderId' => '1'
+        'pedigree_number' => '1'
+        'number_KSU' => '1'
+        'number_FCI' => '1'
+        'registration_club' => '1'
+        'breeding_club' => '1'
+        'comments' => 'Пробный шар'
+        'father' => '1'
+        'mother' => '2'
+        'dignityId' => '3'
+        'awardsId' => '2'
+        'puppy_card_number' => '1'
+        'participation_in_the_exhibition' => '1'
+    ]
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'goersckkku9k3u44ssi0pjgqu9929h7k'
+    '_csrf' => '512f927bb0c6688ef8e6cceff304c8637f43aa3a06cc180b2fab2d38d4207008a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"vEfj28ck_6eSCEbpMkdy-2bo1XtrltYd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '609'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ORIGIN' => 'http://ipets'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=pets%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=goersckkku9k3u44ssi0pjgqu9929h7k; _csrf=512f927bb0c6688ef8e6cceff304c8637f43aa3a06cc180b2fab2d38d4207008a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vEfj28ck_6eSCEbpMkdy-2bo1XtrltYd%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2142'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pets%2Fcreate'
+    'REQUEST_URI' => '/index.php?r=pets%2Fcreate'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576505133.989
+    'REQUEST_TIME' => 1576505133
+    'argv' => [
+        0 => 'r=pets%2Fcreate'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:22:36 [127.0.0.1][100][goersckkku9k3u44ssi0pjgqu9929h7k][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\Pets::Порода in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Component.php:154
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\db\BaseActiveRecord.php(298): yii\base\Component->__get('\xD0\x9F\xD0\xBE\xD1\x80\xD0\xBE\xD0\xB4\xD0\xB0')
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\helpers\BaseArrayHelper.php(209): yii\db\BaseActiveRecord->__get('\xD0\x9F\xD0\xBE\xD1\x80\xD0\xBE\xD0\xB4\xD0\xB0')
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\widgets\DetailView.php(238): yii\helpers\BaseArrayHelper::getValue(Object(app\models\Pets), '\xD0\x9F\xD0\xBE\xD1\x80\xD0\xBE\xD0\xB4\xD0\xB0')
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\widgets\DetailView.php(143): yii\widgets\DetailView->normalizeAttributes()
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\BaseObject.php(109): yii\widgets\DetailView->init()
+#5 [internal function]: yii\base\BaseObject->__construct(Array)
+#6 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\di\Container.php(400): ReflectionClass->newInstanceArgs(Array)
+#7 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\di\Container.php(159): yii\di\Container->build('yii\\widgets\\Det...', Array, Array)
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\BaseYii.php(351): yii\di\Container->get('yii\\widgets\\Det...', Array, Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Widget.php(137): yii\BaseYii::createObject(Array)
+#10 C:\OSPanel\domains\localhost\ipets\views\pets\view.php(30): yii\base\Widget::widget(Array)
+#11 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(348): require('C:\\OSPanel\\doma...')
+#12 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#13 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(156): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\PetsController))
+#14 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(386): yii\base\View->render('view', Array, Object(app\controllers\PetsController))
+#15 C:\OSPanel\domains\localhost\ipets\controllers\PetsController.php(55): yii\base\Controller->render('view', Array)
+#16 [internal function]: app\controllers\PetsController->actionView('1')
+#17 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#18 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#19 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#20 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pets/view', Array)
+#21 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#23 {main}
+2019-12-16 17:22:35 [127.0.0.1][100][goersckkku9k3u44ssi0pjgqu9929h7k][info][application] $_GET = [
+    'r' => 'pets/view'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'goersckkku9k3u44ssi0pjgqu9929h7k'
+    '_csrf' => '512f927bb0c6688ef8e6cceff304c8637f43aa3a06cc180b2fab2d38d4207008a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"vEfj28ck_6eSCEbpMkdy-2bo1XtrltYd\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=pets%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=goersckkku9k3u44ssi0pjgqu9929h7k; _csrf=512f927bb0c6688ef8e6cceff304c8637f43aa3a06cc180b2fab2d38d4207008a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22vEfj28ck_6eSCEbpMkdy-2bo1XtrltYd%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2337'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pets%2Fview&id=1'
+    'REQUEST_URI' => '/index.php?r=pets%2Fview&id=1'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576506155.9
+    'REQUEST_TIME' => 1576506155
+    'argv' => [
+        0 => 'r=pets%2Fview&id=1'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:32:41 [127.0.0.1][100][bgc1ub2lfuiljmnmtou0fuvbh681o9hf][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pets/view', Array)
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2019-12-16 17:32:41 [127.0.0.1][100][bgc1ub2lfuiljmnmtou0fuvbh681o9hf][info][application] $_GET = [
+    'r' => 'pets/view'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'bgc1ub2lfuiljmnmtou0fuvbh681o9hf'
+    '_csrf' => 'ce3682d1b1da6a0498631d5634dcdbfe303de4ed1b726b3a5ddfbdba79ce65b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4KONq9UiQislSPwFxMmSdefC4Y9wleIz\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=admin%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=bgc1ub2lfuiljmnmtou0fuvbh681o9hf; _csrf=ce3682d1b1da6a0498631d5634dcdbfe303de4ed1b726b3a5ddfbdba79ce65b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224KONq9UiQislSPwFxMmSdefC4Y9wleIz%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2461'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pets%2Fview'
+    'REQUEST_URI' => '/index.php?r=pets%2Fview'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576506761.132
+    'REQUEST_TIME' => 1576506761
+    'argv' => [
+        0 => 'r=pets%2Fview'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:33:54 [127.0.0.1][100][bgc1ub2lfuiljmnmtou0fuvbh681o9hf][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Missing required parameters: id in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Controller.php:149
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(51): yii\web\Controller->bindActionParams(Object(yii\base\InlineAction), Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('view', Array)
+#3 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('pets/view', Array)
+#4 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#5 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#6 {main}
+2019-12-16 17:33:54 [127.0.0.1][100][bgc1ub2lfuiljmnmtou0fuvbh681o9hf][info][application] $_GET = [
+    'r' => 'pets/view'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'bgc1ub2lfuiljmnmtou0fuvbh681o9hf'
+    '_csrf' => 'ce3682d1b1da6a0498631d5634dcdbfe303de4ed1b726b3a5ddfbdba79ce65b6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"4KONq9UiQislSPwFxMmSdefC4Y9wleIz\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=admin%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=bgc1ub2lfuiljmnmtou0fuvbh681o9hf; _csrf=ce3682d1b1da6a0498631d5634dcdbfe303de4ed1b726b3a5ddfbdba79ce65b6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%224KONq9UiQislSPwFxMmSdefC4Y9wleIz%22%3B%7D'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2476'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pets%2Fview'
+    'REQUEST_URI' => '/index.php?r=pets%2Fview'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576506834.772
+    'REQUEST_TIME' => 1576506834
+    'argv' => [
+        0 => 'r=pets%2Fview'
+    ]
+    'argc' => 1
+]
+2019-12-16 17:43:02 [127.0.0.1][-][r7uifffej6v93bbt9sin6hcgap907eo9][error][ParseError] ParseError: syntax error, unexpected ']' in C:\OSPanel\domains\localhost\ipets\views\layouts\main.php:56
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(401): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(387): yii\base\Controller->renderContent('<div class="sit...')
+#3 C:\OSPanel\domains\localhost\ipets\controllers\SiteController.php(65): yii\base\Controller->render('index')
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-16 17:43:02 [127.0.0.1][-][r7uifffej6v93bbt9sin6hcgap907eo9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd14c897d90bf7aba107a738840b9e9df54314916042c0a800859939a20d200faa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SZKESqNdnfEnHy0aij2nACmfSsDgFiiw\";}'
+    'PHPSESSID' => 'r7uifffej6v93bbt9sin6hcgap907eo9'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=pets%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d14c897d90bf7aba107a738840b9e9df54314916042c0a800859939a20d200faa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SZKESqNdnfEnHy0aij2nACmfSsDgFiiw%22%3B%7D; PHPSESSID=r7uifffej6v93bbt9sin6hcgap907eo9'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2565'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576507382.446
+    'REQUEST_TIME' => 1576507382
+    'argv' => []
+    'argc' => 0
+]
+2019-12-16 17:44:05 [127.0.0.1][-][r7uifffej6v93bbt9sin6hcgap907eo9][error][ParseError] ParseError: syntax error, unexpected ']' in C:\OSPanel\domains\localhost\ipets\views\layouts\main.php:56
+Stack trace:
+#0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\View.php(257): yii\base\View->renderPhpFile('C:\\OSPanel\\doma...', Array)
+#1 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(401): yii\base\View->renderFile('C:\\OSPanel\\doma...', Array, Object(app\controllers\SiteController))
+#2 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(387): yii\base\Controller->renderContent('<div class="sit...')
+#3 C:\OSPanel\domains\localhost\ipets\controllers\SiteController.php(65): yii\base\Controller->render('index')
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\InlineAction.php(57): call_user_func_array(Array, Array)
+#6 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php(528): yii\base\Controller->runAction('', Array)
+#8 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('', Array)
+#9 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
+#11 {main}
+2019-12-16 17:44:05 [127.0.0.1][-][r7uifffej6v93bbt9sin6hcgap907eo9][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'd14c897d90bf7aba107a738840b9e9df54314916042c0a800859939a20d200faa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SZKESqNdnfEnHy0aij2nACmfSsDgFiiw\";}'
+    'PHPSESSID' => 'r7uifffej6v93bbt9sin6hcgap907eo9'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_PRAGMA' => 'no-cache'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
+    'HTTP_REFERER' => 'http://ipets/index.php?r=pets%2Fupdate&id=1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru,en-US;q=0.9,en;q=0.8'
+    'HTTP_COOKIE' => '_csrf=d14c897d90bf7aba107a738840b9e9df54314916042c0a800859939a20d200faa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22SZKESqNdnfEnHy0aij2nACmfSsDgFiiw%22%3B%7D; PHPSESSID=r7uifffej6v93bbt9sin6hcgap907eo9'
+    'PATH' => 'c:\\ospanel\\modules\\php\\PHP-7.2-x64\\ext;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear;c:\\ospanel\\modules\\php\\PHP-7.2-x64\\pear\\bin;c:\\ospanel\\modules\\php\\PHP-7.2-x64;c:\\ospanel\\modules\\imagemagick;c:\\ospanel\\modules\\wget\\bin;c:\\ospanel\\modules\\git;c:\\ospanel\\modules\\git\\bin;c:\\ospanel\\modules\\git\\mingw\\bin;c:\\ospanel\\modules\\git\\cmd;c:\\ospanel\\modules\\database\\MySQL-5.7-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64\\bin;c:\\ospanel\\modules\\http\\Apache-PHP-7.2-x64;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\system32\\Wbem;C:\\WINDOWS\\SysWOW64'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
+    'REMOTE_PORT' => '2573'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/index.php'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1576507445.529
+    'REQUEST_TIME' => 1576507445
+    'argv' => []
+    'argc' => 0
+]

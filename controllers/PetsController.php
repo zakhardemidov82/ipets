@@ -14,9 +14,8 @@ use yii\filters\VerbFilter;
  */
 class PetsController extends Controller
 {
-    /**
-     * {@inheritdoc}
-     */
+    public $layout = 'admin';
+
     public function behaviors()
     {
         return [
