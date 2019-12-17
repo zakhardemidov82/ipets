@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use yii\db\ActiveRecord;
 
 /**
  * This is the model class for table "owner".
@@ -31,9 +32,21 @@ class Owner extends \yii\db\ActiveRecord
     /**
      * {@inheritdoc}
      */
+    public $image;
+    public $gallery;
+
     public static function tableName()
     {
         return 'owner';
+    }
+
+    public function behaviors()
+    {
+        return [
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
     }
 
     /**
@@ -49,6 +62,8 @@ class Owner extends \yii\db\ActiveRecord
             [['last_name', 'first_name', 'middle_name', 'city', 'street'], 'string', 'max' => 40],
             [['phone_home', 'phone_work'], 'string', 'max' => 15],
             [['email', 'site', 'cipher_in_the_breeding_factory', 'KSU_code'], 'string', 'max' => 100],
+            [['image'], 'file', 'extensions' => 'png, jpg'],
+            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 5],
         ];
     }
 
@@ -77,5 +92,19 @@ class Owner extends \yii\db\ActiveRecord
             'comments' => 'Комментарии',
             'petsId' => 'Данные о собаках',
         ];
+    }
+    public function uploadGallery(){
+        if ($this->validate()){
+            foreach($this->gallery as $file){
+                $path = 'upload/store/'. $file->baseName . '.' . $file->extension;
+                $file->saveAs($path);
+                $this->attachImage($path);
+                @unlink($path);
+            }
+            return true;
+        }
+        else{
+            return false;
+        }
     }
 }

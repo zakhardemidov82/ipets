@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\helpers\Url;
+use app\models\Owner;
+use app\models\Image;
 
 class SiteController extends Controller
 {
@@ -133,5 +135,17 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionOwners()
+    {
+        $this->layout = 'main';
+
+        $owners = Owner::find()->all();
+        $images = Image::find()->all();
+
+        return $this->render('owners', [
+            'owners' => $owners,
+            'images' => $images,
+        ]);
     }
 }

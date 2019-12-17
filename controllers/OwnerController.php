@@ -7,7 +7,9 @@ use app\models\Owner;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
+use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
+use yii\web\UploadedFile;
 
 /**
  * OwnerController implements the CRUD actions for Owner model.
@@ -36,6 +38,18 @@ class OwnerController extends Controller
      * Lists all Owner models.
      * @return mixed
      */
+    /*public function beforeAction($action)
+    {
+        if (parent::beforeAction($action)) {
+            if (!\Yii::$app->user->can('admin')) {
+                throw new ForbiddenHttpException('Доступ заборонено, спочатку пройдіть перевірку на розпізнавання голосу, сканування сітківки ока та відбитків пальців');
+            }
+            return true;
+        } else {
+            return false;
+        }
+    }*/
+
     public function actionIndex()
     {
         $dataProvider = new ActiveDataProvider([
@@ -70,6 +84,15 @@ class OwnerController extends Controller
         $model = new Owner();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $model->upload();
+            }
+
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
+
+            Yii::$app->session->setFlash('success', "Профіль {$model->last_name} додан");
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
@@ -90,6 +113,14 @@ class OwnerController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $model->upload();
+            }
+            unset($model->image);//удаляет оригиналы фотографий, чтоб не засорять память
+
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 

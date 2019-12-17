@@ -29,8 +29,8 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => Yii::$app->name,
-        'brandUrl' => Yii::$app->homeUrl,
+        'brandLabel' => 'Админ-панель',
+        'brandUrl' => ['pets/index'],
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -39,6 +39,9 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
             ['label' => 'Данные питомцев', 'url' => ['/pets/index']],
+            ['label' => 'Данные владельцев', 'url' => ['/owner/index']],
+            ['label' => 'Данные вязок', 'url' => ['/owner/index']],
+            ['label' => 'Данные выставок', 'url' => ['/owner/index']],
             ['label' => 'Данные владельцев', 'url' => ['/owner/index']],
             /*['label' => 'Contact', 'url' => ['/site/contact']],*/
             Yii::$app->user->isGuest ? (
