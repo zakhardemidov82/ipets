@@ -31,7 +31,7 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 				I-Pets
 			</a>
 			<a href="tel:+380667912739" class="top-menu-tel">+38-066-791-27-39</a>
-			<a href="#mcallback" class="btn m-btn">Войти в систему</a>
+			<a href="/login" class="btn m-btn">Войти в систему</a>
 		</div>
 	</section>
 	
@@ -40,7 +40,7 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 			<div class="wrapper _left">
 				<div class="header-item-title">Системный учет</div>
 				<div class="header-item-subtitle">Удобный, современный, облачный сервис для ведения базы учета клубами любителей животных.</div>
-				<a href="#mcallback" class="btn s-btn">Оставить заявку</a>
+				<a href="#mcallback" data-lity class="btn s-btn">Оставить заявку</a>
 			</div>
 		</div>
 		
@@ -48,7 +48,7 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 			<div class="wrapper">
 				<div class="header-item-title">Административный учет </div>
 				<div class="header-item-subtitle">Удобный, современный, облачный сервис для ведения базы учета клубами любителей животных.</div>
-				<a href="#mcallback" class="btn s-btn">Оставить заявку</a>
+				<a href="#mcallback" data-lity class="btn s-btn">Оставить заявку</a>
 			</div>
 		</div>
 		
@@ -56,7 +56,7 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 			<div class="wrapper">
 				<div class="header-item-title">Партнерские программы</div>
 				<div class="header-item-subtitle">Удобный, современный, облачный сервис для ведения базы учета клубами любителей животных.</div>
-				<a href="#mcallback" class="btn s-btn">Оставить заявку</a>
+				<a href="#mcallback" data-lity class="btn s-btn">Оставить заявку</a>
 			</div>
 		</div>
 	</div>
@@ -203,13 +203,16 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 			<div class="form-home-title">Заполните форму,</div>
 			<div class="form-home-subtitle">чтобы получить полную презентацию в формате PDF</div>
 			
-			<form>
-				<input type="text" placeholder="Ваше имя *" class="m-input" required>
-				<input type="text" placeholder="Ваш телефон *" class="m-input" required>
-				<input type="email" placeholder="Ваше e-mail *" class="m-input" required>
+			<form class="ajaxform" action="/home-send">
+				<input type="text" placeholder="Ваше имя *" class="m-input" name="name" required>
+				<input type="text" placeholder="Ваш телефон *" class="m-input" name="tel" required>
+				<input type="email" placeholder="Ваше e-mail *" class="m-input" name="email" required>
 				
+				<input type="hidden" name="form" value="Узнать больше об i-pets">
+				
+				<?=Html :: hiddenInput(\Yii :: $app->getRequest()->csrfParam, \Yii :: $app->getRequest()->getCsrfToken(), []);?>
 				<button class="btn s-btn">Получить</button>
-			<form>
+			</form>
 		</div>
 	</div>
 </section>
@@ -227,13 +230,57 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 				<p>ИНН 477443451</p>
 			</div>
 		</div>
-		<a href="" class="btn t-btn">Зарегестрироваться в системе</a>
+		<a href="#mcallback" data-lity class="btn t-btn">Зарегестрироваться в системе</a>
 		
 		<div class="footer-left">
 			<div class="footer-p">Появились вопросы? Звоните!</div>
 			<a href="tel:+380667912739" class="footer-tel">+38-066-791-27-39</a>
-			<a href="#footercallback" class="footer-callback">Заказать обратный звонок</a>
-			<a href="#policy" class="footer-policy">Положение об обработке персональных данных</a>
+			<a href="#footercallback" data-lity class="footer-callback">Заказать обратный звонок</a>
+			<a href="#policy" data-lity class="footer-policy">Положение об обработке персональных данных</a>
 		</div>
 	</div>
 </footer>
+
+
+<div class="lity-hide form-modal" id="footercallback">
+	<div class="form-modal-title">Заполните форму</div>
+	<div class="form-modal-subtitle">Чтобы получить консультацию менеджера по телефону</div>
+			
+	<form class="ajaxform" action="/home-send">
+		<input type="text" placeholder="Ваше имя *" class="m-input" name="name" required>
+		<input type="text" placeholder="Ваш телефон *" class="m-input" name="tel" required>
+	
+		<input type="hidden" name="form" value="Футер - заказать звонок">
+		<?=Html :: hiddenInput(\Yii :: $app->getRequest()->csrfParam, \Yii :: $app->getRequest()->getCsrfToken(), []);?>
+		<button class="btn s-btn">Заказать звонок</button>
+	</form>
+</div>
+
+
+<div class="lity-hide form-modal" id="mcallback">
+	<div class="form-modal-title">Заявка на подключение</div>
+	<div class="form-modal-subtitle">Чтобы зарегестрировать в системе оставьте заявку и наш менеджер свяжеться с Вам</div>
+	
+	<form class="ajaxform" action="/home-send">
+		<input type="text" placeholder="Ваше имя *" class="m-input" name="name" required>
+		<input type="text" placeholder="Ваш телефон *" class="m-input" name="tel" required>
+		<input type="email" placeholder="Ваше e-mail *" class="m-input" name="email" required>
+				
+		<input type="hidden" name="form" value="Оставить заявку">
+		<?=Html :: hiddenInput(\Yii :: $app->getRequest()->csrfParam, \Yii :: $app->getRequest()->getCsrfToken(), []);?>
+		<button class="btn s-btn">Оставить заявку</button>
+	</form>
+</div>
+
+
+<div class="lity-hide policy-modal" id="policy">
+	<div class="policy-modal-title">Рыба текст — тестовый текст на сайт</div>
+	<p>Что такое текст «рыба» знают все, кто работает с версткой журналов, дизайном и разработкой сайтов. Этот текст служит для демонстрации того, как контент впоследствии будет выглядеть на готовой странице, чтобы увидеть, правильно ли размещаются абзацы, отступы, хорошо ли смотрятся шрифты. Такие рыбные тексты, как правило, не несут никакой смысловой нагрузки.</p>
+	<div class="policy-modal-title">Генератор текста онлайн</div>
+	<p>На моменте создания макета у дизайнера нет готовых текстов, поэтому генерируется некий демонстрационный текст. Некоторые студии предпочитают писать такой текст самостоятельно, но чаще используются готовые тексты, созданные программой – генератором текста. Более того, у такого текста есть один неоспоримый плюс – поскольку читать его неинтересно, внимание переключается именно на оформление макета, заказчик будет сосредоточен на изучении формы, дизайна, верстки.</p>
+	<div class="policy-modal-title">Как сгенерировать случайный текст на русском или английском?</div>
+	<p>Уже много веков в книгопечатании используется стандартный рыбный текст, начинающийся со слов Lorem ipsum, – это отрывок с вырванными фразами из труда древнеримского философа Цицерона. Именно его используют в верстке чаще всего. Однако если ваш проект ориентирован на кириллицу, этот латинский текст не подойдет. Вообще лучше использовать тексты на том языке, который будет впоследствии использоваться.</p>
+	<p>А чтобы создать текст-рыбу на русском языке, проще всего будет воспользоваться рандомизатором текста – программой, которая случайным образом генерирует рыбные тексты. Именно такую программу вы видите на этом сайте. Как ею воспользоваться</p>
+</div>
+
+

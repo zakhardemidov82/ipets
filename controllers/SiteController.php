@@ -10,6 +10,9 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 
+
+use app\models\SendEmail;
+
 class SiteController extends Controller
 {
     /**
@@ -59,12 +62,26 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
+    public function actionIndex()    {
 		$this->layout = 'front'; 
 		return $this->render('index');
     }
 
+	//Отправка сообщения
+	public function actionHomeSend()    {
+		if (Yii::$app->request->isAjax)	{
+			$msg = array (
+				'name' =>Yii::$app->request->post()['name'],
+				'tel' => Yii::$app->request->post()['tel'],
+				'email' => Yii::$app->request->post()['email'],
+				'form' => Yii::$app->request->post()['form'],
+			);
+			if (SendEmail::fromHome($msg))	{return 'ok';}
+			else {return 'error';}
+		}
+		return 'error';
+    }
+	
     /**
      * Login action.
      *

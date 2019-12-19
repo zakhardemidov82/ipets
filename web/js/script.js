@@ -4,15 +4,6 @@ $(document).ready(function() {
 	/*
 	//маска ввода
 	$("input[name='tel']").mask("+7 (999) 999-99-99");
-	
-	//Селект
-	$('select').niceSelect();
-	
-	//Всплывающие подсказки
-    $.tips({
-        action: 'hover',
-        element: '.hover',
-    });
 	*/
 	//Слайдер отзывов
 	$('.header-slider').slick({
@@ -23,9 +14,48 @@ $(document).ready(function() {
 		dots:true
 	});
 	
+	//Отправка формы 
+	$('.ajaxform').on('submit',(function(e) {
+		e.preventDefault();
+		
+		var	submit_button = $(this).find('button');
+		var formData = new FormData(this);
+		var url = $(this).attr('action');
+		
+		$.ajax({
+			type:'POST',
+			url: url,
+			data: formData, 
+			cache:false, 
+			contentType: false, 
+			processData: false, 
+			beforeSend: function () {
+                submit_button.addClass('process');
+            },
+			
+			success:function(data){
+				submit_button.removeClass('process');
+				$('body').hermesNotification({'success':'Message send', 'successMsg':'Message send text'});
+				$('.lity-close').trigger('click');
+			},
+			error:function(data){
+				$('body').hermesNotification('error', {'error':'Message send error', 'errorMsg':'Message send error text'});
+				$('body').hermesNotification('error');
+			}
+		});
+	}));
+	
+	//колонки одинаковой высоты
+	var tallest = 0;
+	$('.scope-row-text').each(function() {
+		thisHeight = $(this).height();
+		if(thisHeight > tallest) {
+			tallest = thisHeight;
+		}
+	});
+	$('.scope-row-text').height(tallest);
 });
 
-//Плавная прокрутка к якорям
-$(function(){
-	$("a[href*=#]:not([href=#]):not([data-lity])").click(function(){if(location.pathname.replace(/^\//,"")==this.pathname.replace(/^\//,"")&&location.hostname==this.hostname){var t=$(this.hash);if(t=t.length?t:$("[name="+this.hash.slice(1)+"]"),t.length)return $("html,body").animate({scrollTop:t.offset().top},1000),!1}})
-});
+
+
+
