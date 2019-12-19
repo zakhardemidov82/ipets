@@ -12,12 +12,10 @@ $this->params['breadcrumbs'][] = $this->title;
             <div class="col-md-4 player">
                 <?php
                 $images = Image::find()->where(['itemId'=> $owner['id'], 'modelName'=> 'Owner'])->all();
-                /*$count = $player['count'];*/
                 ?>
                 <?php foreach($images as $img): ?>
                     <img src="<?=Yii::getAlias('@web')?>/upload/store/<?= $img['filePath']?>" class="owner-view" alt="...">
                 <?php endforeach;?>
-                <!--<h4><?/*= $player['name']*/?> (<span class="icon-eye">  <?/*= $count*/?></span>)</h4>-->
                 <h4><?= $owner['last_name']?></h4>
                 <h4><?= $owner['first_name']?></h4>
                 <h4><?= $owner['middle_name']?></h4>
