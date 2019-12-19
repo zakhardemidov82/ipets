@@ -4,8 +4,8 @@
 
 $this->title = 'ipets';
 ?>
-<div class="site-index">
 
+<<<<<<< HEAD
 
 
     <div class="body-content">
@@ -45,3 +45,5 @@ $this->title = 'ipets';
 
     </div>
 </div>
+=======
+>>>>>>> igor
