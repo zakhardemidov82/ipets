@@ -52,11 +52,12 @@ mihaildev\elfinder\Assets::noConflict($this);
     <div class="row">
         <div class="col-md-9">
 
-            <?= $form->field($model, 'comments')->widget(CKEditor::className(), [
+            <?/*= $form->field($model, 'comments')->widget(CKEditor::className(), [
 
                 'editorOptions' => ElFinder::ckeditorOptions('elfinder',[]),
 
-            ]); ?>
+            ]); */?>
+            <?= $form->field($model, 'comments')->textarea(['rows' => 6]) ?>
         </div>
         <div class="col-md-3">
             <?/*= $form->field($model, 'dob')->widget(
