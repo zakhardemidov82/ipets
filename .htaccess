@@ -1,0 +1,32 @@
+RewriteEngine on
+Options +FollowSymLinks
+RewriteBase /
+IndexIgnore */*
+
+
+RewriteCond %{REQUEST_URI} !^/(web)
+RewriteRule ^assets/(.*)$ /web/assets/$1 [l]
+RewriteRule ^css/(.*)$ /web/css/$1 [l]
+RewriteRule ^js/(.*)$ /web/js/$1 [l]
+RewriteRule ^images/(.*)$ /web/images/$1 [l]
+RewriteRule (.*)$ /web/$1 [l]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /web/index.php
+
+SetEnvIfNoCase User-Agent "^Googlebot" search_bot
+SetEnvIfNoCase User-Agent "^Yandex" search_bot
+SetEnvIfNoCase User-Agent "^Yahoo" search_bot
+SetEnvIfNoCase User-Agent "^Aport" search_bot
+SetEnvIfNoCase User-Agent "^msnbot" search_bot
+SetEnvIfNoCase User-Agent "^spider" search_bot
+SetEnvIfNoCase User-Agent "^Robot" search_bot
+SetEnvIfNoCase User-Agent "^php" search_bot
+SetEnvIfNoCase User-Agent "^Mail" search_bot
+SetEnvIfNoCase User-Agent "^bot" search_bot
+SetEnvIfNoCase User-Agent "^igdeSpyder" search_bot
+SetEnvIfNoCase User-Agent "^Snapbot" search_bot
+SetEnvIfNoCase User-Agent "^WordPress" search_bot
+SetEnvIfNoCase User-Agent "^BlogPulseLive" search_bot
+SetEnvIfNoCase User-Agent "^Parser" search_bot
