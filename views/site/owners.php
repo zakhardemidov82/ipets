@@ -2,7 +2,8 @@
 use app\models\Image;
 
 
-$this->title = 'Наші гравці';
+$this->title = 'Владельцы
+';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row content-one">
