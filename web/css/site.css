@@ -9,6 +9,12 @@ body {
     margin: 0 auto -60px;
     padding: 0 0 60px;
 }
+.owner-view {
+    width: auto;
+    max-height: 250px;
+    margin: auto;
+    margin-bottom: 10px;
+}
 
 .wrap > .container {
     padding: 70px 15px 20px;

@@ -6,12 +6,7 @@ $this->title = 'ipets';
 ?>
 <div class="site-index">
 
-    <div class="jumbotron">
 
-
-
-        <p><a class="btn btn-lg btn-success" href="http://www.yiiframework.com">Get started with Yii</a></p>
-    </div>
 
     <div class="body-content">
 

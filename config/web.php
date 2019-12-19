@@ -7,6 +7,21 @@ $config = [
     'id' => 'ipets',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
+    'language' => 'uk',
+    /*'defaultRoute' => 'site/index',*/
+    'modules' => [
+       /* 'admin' => [
+            'class' => 'app\modules\admin\Module',
+            'layout' => 'admin',
+        ],*/
+        'yii2images' => [
+            'class' => 'rico\yii2images\Module',
+            'imagesStorePath' => 'upload/store',
+            'imagesCachePath' => 'upload/cache',
+            'graphicsLibrary' => 'GD',
+            'placeHolderPath' => '@webroot/upload/store/no-image.png',
+        ],
+    ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
@@ -16,12 +31,16 @@ $config = [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => '123',
         ],
+        /*'authManager' => [
+            'class' => 'yii\rbac\DbManager'
+        ],*/
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
         'user' => [
             'identityClass' => 'app\models\User',
             'enableAutoLogin' => true,
+            /*'loginUrl' => '/admin'*/
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
@@ -51,6 +70,16 @@ $config = [
             ],
         ],
         */
+    ],
+    'controllerMap' => [
+        'elfinder' => [
+            'class' => 'mihaildev\elfinder\PathController',
+            'access' => ['@'],
+            'root' => [
+                'path' => 'upload/global',
+                'name' => 'Global'
+            ],
+        ]
     ],
     'params' => $params,
 ];
