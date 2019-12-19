@@ -9,6 +9,12 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use yii\helpers\Url;
+use app\models\Owner;
+use app\models\Image;
+
+
+use app\models\SendEmail;
 
 class SiteController extends Controller
 {
@@ -59,11 +65,26 @@ class SiteController extends Controller
      *
      * @return string
      */
-    public function actionIndex()
-    {
-        return $this->render('index');
+    public function actionIndex()    {
+		$this->layout = 'front'; 
+		return $this->render('index');
     }
 
+	//Отправка сообщения
+	public function actionHomeSend()    {
+		if (Yii::$app->request->isAjax)	{
+			$msg = array (
+				'name' =>Yii::$app->request->post()['name'],
+				'tel' => Yii::$app->request->post()['tel'],
+				'email' => Yii::$app->request->post()['email'],
+				'form' => Yii::$app->request->post()['form'],
+			);
+			if (SendEmail::fromHome($msg))	{return 'ok';}
+			else {return 'error';}
+		}
+		return 'error';
+    }
+	
     /**
      * Login action.
      *
@@ -77,7 +98,15 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            if($model->getUser()->accessToken === '100-token') {
+                return $this->redirect(Url::toRoute(['admin/index']));
+            }
+            if($model->getUser()->accessToken === '101-token') {
+                return $this->redirect(Url::toRoute(['pets/index']));
+            }
+            else {
+                return $this->redirect(Url::toRoute(['owner/index']));
+            }
         }
 
         $model->password = '';
@@ -124,5 +153,17 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionOwners()
+    {
+        $this->layout = 'main';
+
+        $owners = Owner::find()->all();
+        $images = Image::find()->all();
+
+        return $this->render('owners', [
+            'owners' => $owners,
+            'images' => $images,
+        ]);
     }
 }
