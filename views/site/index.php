@@ -131,7 +131,7 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 		</div>
 		
 		<div class="scope-row">
-			<div class="scope-row-img" style="background-image:url(images/template/partners.jpg)"><span style="background:#fc4067;"></span><strong>Партнерские <br>программы</strong></div>
+			<div class="scope-row-img" style="background-image:url(images/template/partners.jpg)"><span style="background:#6af788;"></span><strong>Партнерские <br>программы</strong></div>
 			<div class="scope-row-text">
 				<ul>
 					<li>Кинологические клубы Украины, СНГ, Европы</li>
