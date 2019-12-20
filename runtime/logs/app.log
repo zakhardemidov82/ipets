@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 2019-12-19 15:35:29 [127.0.0.1][100][blborssj4vqe1ktinsgfv0rftnr9a8ag][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "login". in C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\base\Module.php:537
 Stack trace:
 #0 C:\OSPanel\domains\localhost\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('login', Array)
@@ -11,27 +12,124 @@ Stack trace:
 #1 C:\OSPanel\domains\localhost\ipets\web\index.php(12): yii\base\Application->run()
 #2 {main}
 2019-12-19 15:35:29 [127.0.0.1][100][blborssj4vqe1ktinsgfv0rftnr9a8ag][info][application] $_GET = []
+=======
+2019-12-19 15:15:26 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "toolbar.css.map". in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('toolbar.css.map', Array)
+#1 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Сторінка не знайдена. in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-19 15:15:26 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][info][application] $_GET = []
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
 
 $_POST = []
 
 $_FILES = []
 
 $_COOKIE = [
+<<<<<<< HEAD
     'PHPSESSID' => 'blborssj4vqe1ktinsgfv0rftnr9a8ag'
     '_identity' => '30efa057900262bd5591fed58e4a9ebd37516f9b161a22811a3eb79cc6cffb52a:2:{i:0;s:9:\"_identity\";i:1;s:28:\"[\"100\",\"test100key\",2592000]\";}'
     '_csrf' => '6b65e7d231896b02215897d31219baaaba578379e67ceaa11a48896b4a901944a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"SVd0i3qFusyS8ZB1-TeMxD0YVXupmsAL\";}'
+=======
+    'PHPSESSID' => '9vvm9cneha60okto6ru0f0nev4'
+    '_csrf' => 'aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU\";}'
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
 ]
 
 $_SESSION = [
     '__flash' => []
+<<<<<<< HEAD
     '__id' => '100'
 ]
 
 $_SERVER = [
+=======
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9vvm9cneha60okto6ru0f0nev4; _csrf=aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU%22%3B%7D'
+    'PATH' => 'd:\\apps\\openserver\\modules\\php\\PHP-7-x64\\ext;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;d:\\apps\\openserver\\modules\\php\\PHP-7-x64;d:\\apps\\openserver\\modules\\imagemagick;d:\\apps\\openserver\\modules\\wget\\bin;d:\\apps\\openserver\\modules\\git;d:\\apps\\openserver\\modules\\git\\bin;d:\\apps\\openserver\\modules\\git\\mingw\\bin;d:\\apps\\openserver\\modules\\git\\cmd;d:\\apps\\openserver\\modules\\database\\MySQL-5.6-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/apps/OpenServer/domains/ipets/web/index.php'
+    'REMOTE_PORT' => '19135'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/toolbar.css.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576757726.84
+    'REQUEST_TIME' => 1576757726
+    'argv' => []
+    'argc' => 0
+]
+2019-12-19 15:15:46 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "owners". in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('owners', Array)
+#1 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Сторінка не знайдена. in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-19 15:15:46 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9vvm9cneha60okto6ru0f0nev4'
+    '_csrf' => 'aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
     'REDIRECT_STATUS' => '200'
     'HTTP_HOST' => 'ipets'
     'HTTP_CONNECTION' => 'keep-alive'
     'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+<<<<<<< HEAD
     'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/68.0.3440.106 Safari/537.36'
     'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8'
     'HTTP_REFERER' => 'http://ipets/index.php?r=site%2Fowners'
@@ -43,12 +141,229 @@ $_SERVER = [
     'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
     'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
     'WINDIR' => 'C:\\WINDOWS'
+=======
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9vvm9cneha60okto6ru0f0nev4; _csrf=aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU%22%3B%7D'
+    'PATH' => 'd:\\apps\\openserver\\modules\\php\\PHP-7-x64\\ext;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;d:\\apps\\openserver\\modules\\php\\PHP-7-x64;d:\\apps\\openserver\\modules\\imagemagick;d:\\apps\\openserver\\modules\\wget\\bin;d:\\apps\\openserver\\modules\\git;d:\\apps\\openserver\\modules\\git\\bin;d:\\apps\\openserver\\modules\\git\\mingw\\bin;d:\\apps\\openserver\\modules\\git\\cmd;d:\\apps\\openserver\\modules\\database\\MySQL-5.6-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
     'SERVER_SIGNATURE' => ''
     'SERVER_SOFTWARE' => 'Apache'
     'SERVER_NAME' => 'ipets'
     'SERVER_ADDR' => '127.0.0.1'
     'SERVER_PORT' => '80'
     'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/apps/OpenServer/domains/ipets/web/index.php'
+    'REMOTE_PORT' => '19155'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/owners'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576757745.988
+    'REQUEST_TIME' => 1576757745
+    'argv' => []
+    'argc' => 0
+]
+2019-12-19 15:15:46 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "toolbar.css.map". in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('toolbar.css.map', Array)
+#1 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Сторінка не знайдена. in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-19 15:15:46 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9vvm9cneha60okto6ru0f0nev4'
+    '_csrf' => 'aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9vvm9cneha60okto6ru0f0nev4; _csrf=aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU%22%3B%7D'
+    'PATH' => 'd:\\apps\\openserver\\modules\\php\\PHP-7-x64\\ext;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;d:\\apps\\openserver\\modules\\php\\PHP-7-x64;d:\\apps\\openserver\\modules\\imagemagick;d:\\apps\\openserver\\modules\\wget\\bin;d:\\apps\\openserver\\modules\\git;d:\\apps\\openserver\\modules\\git\\bin;d:\\apps\\openserver\\modules\\git\\mingw\\bin;d:\\apps\\openserver\\modules\\git\\cmd;d:\\apps\\openserver\\modules\\database\\MySQL-5.6-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/apps/OpenServer/domains/ipets/web/index.php'
+    'REMOTE_PORT' => '19156'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/toolbar.css.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576757746.339
+    'REQUEST_TIME' => 1576757746
+    'argv' => []
+    'argc' => 0
+]
+2019-12-19 16:16:50 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "toolbar.css.map". in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('toolbar.css.map', Array)
+#1 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Сторінка не знайдена. in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-19 16:16:50 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9vvm9cneha60okto6ru0f0nev4'
+    '_csrf' => 'aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9vvm9cneha60okto6ru0f0nev4; _csrf=aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU%22%3B%7D'
+    'PATH' => 'd:\\apps\\openserver\\modules\\php\\PHP-7-x64\\ext;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;d:\\apps\\openserver\\modules\\php\\PHP-7-x64;d:\\apps\\openserver\\modules\\imagemagick;d:\\apps\\openserver\\modules\\wget\\bin;d:\\apps\\openserver\\modules\\git;d:\\apps\\openserver\\modules\\git\\bin;d:\\apps\\openserver\\modules\\git\\mingw\\bin;d:\\apps\\openserver\\modules\\git\\cmd;d:\\apps\\openserver\\modules\\database\\MySQL-5.6-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/apps/OpenServer/domains/ipets/web/index.php'
+    'REMOTE_PORT' => '28829'
+    'REDIRECT_URL' => '/index.php'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/toolbar.css.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576761410.092
+    'REQUEST_TIME' => 1576761410
+    'argv' => []
+    'argc' => 0
+]
+2019-12-19 16:20:17 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request "toolbar.css.map". in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Module.php:537
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php(103): yii\base\Module->runAction('toolbar.css.map', Array)
+#1 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#3 {main}
+
+Next yii\web\NotFoundHttpException: Сторінка не знайдена. in D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\web\Application.php:115
+Stack trace:
+#0 D:\apps\OpenServer\domains\ipets\vendor\yiisoft\yii2\base\Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\apps\OpenServer\domains\ipets\web\index.php(12): yii\base\Application->run()
+#2 {main}
+2019-12-19 16:20:17 [127.0.0.1][-][9vvm9cneha60okto6ru0f0nev4][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '9vvm9cneha60okto6ru0f0nev4'
+    '_csrf' => 'aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'REDIRECT_REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_REDIRECT_STATUS' => '200'
+    'REDIRECT_STATUS' => '200'
+    'HTTP_HOST' => 'ipets'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.88 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7'
+    'HTTP_COOKIE' => 'PHPSESSID=9vvm9cneha60okto6ru0f0nev4; _csrf=aa9d0cbde73859ac10b93295248d90f183134f3619b4424e305c8bff24b52d55a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Dv4zUbltC2c8tKzaifayQMtm0dS4kNUU%22%3B%7D'
+    'PATH' => 'd:\\apps\\openserver\\modules\\php\\PHP-7-x64\\ext;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear;d:\\apps\\openserver\\modules\\php\\PHP-7-x64\\pear\\bin;d:\\apps\\openserver\\modules\\php\\PHP-7-x64;d:\\apps\\openserver\\modules\\imagemagick;d:\\apps\\openserver\\modules\\wget\\bin;d:\\apps\\openserver\\modules\\git;d:\\apps\\openserver\\modules\\git\\bin;d:\\apps\\openserver\\modules\\git\\mingw\\bin;d:\\apps\\openserver\\modules\\git\\cmd;d:\\apps\\openserver\\modules\\database\\MySQL-5.6-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64\\bin;d:\\apps\\openserver\\modules\\http\\Apache-PHP-7-x64;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\system32\\Wbem;C:\\Windows\\SysWOW64'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache'
+    'SERVER_NAME' => 'ipets'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+<<<<<<< HEAD
     'DOCUMENT_ROOT' => 'C:/OSPanel/domains/localhost/ipets/web'
     'REQUEST_SCHEME' => 'http'
     'CONTEXT_PREFIX' => ''
@@ -57,15 +372,33 @@ $_SERVER = [
     'SCRIPT_FILENAME' => 'C:/OSPanel/domains/localhost/ipets/web/index.php'
     'REMOTE_PORT' => '1610'
     'REDIRECT_URL' => '/login'
+=======
+    'DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/apps/OpenServer/domains/ipets'
+    'SERVER_ADMIN' => '[no address given]'
+    'SCRIPT_FILENAME' => 'D:/apps/OpenServer/domains/ipets/web/index.php'
+    'REMOTE_PORT' => '29078'
+    'REDIRECT_URL' => '/index.php'
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
     'GATEWAY_INTERFACE' => 'CGI/1.1'
     'SERVER_PROTOCOL' => 'HTTP/1.1'
     'REQUEST_METHOD' => 'GET'
     'QUERY_STRING' => ''
+<<<<<<< HEAD
     'REQUEST_URI' => '/login'
     'SCRIPT_NAME' => '/index.php'
     'PHP_SELF' => '/index.php'
     'REQUEST_TIME_FLOAT' => 1576758929.52
     'REQUEST_TIME' => 1576758929
+=======
+    'REQUEST_URI' => '/toolbar.css.map'
+    'SCRIPT_NAME' => '/web/index.php'
+    'PHP_SELF' => '/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1576761617.292
+    'REQUEST_TIME' => 1576761617
+>>>>>>> ab48446a4e9c90fc1172228dd931400bf8c73820
     'argv' => []
     'argc' => 0
 ]
