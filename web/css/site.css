@@ -15,7 +15,9 @@ body {
     margin: auto;
     margin-bottom: 10px;
 }
-
+.inv-mobile{
+    color: red;
+ }
 .wrap > .container {
     padding: 70px 15px 20px;
 }

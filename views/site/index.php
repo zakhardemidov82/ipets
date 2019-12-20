@@ -31,7 +31,9 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 				I-Pets
 			</a>
 			<a href="tel:+380667912739" class="top-menu-tel">+38-066-791-27-39</a>
-			<a href="/login" class="btn m-btn">Войти в систему</a>
+            <?php if(Yii::$app->user->isGuest): ?>
+                <a href="<?= \yii\helpers\Url::to(['/site/login'])?>"  style="color: transparent;">Login</a>
+            <?php endif;?>
 		</div>
 	</section>
 	
