@@ -21,7 +21,9 @@ body {
 .wrap > .container {
     padding: 70px 15px 20px;
 }
-
+.hidd{
+    display: none;
+}
 .footer {
     height: 60px;
     background-color: #f5f5f5;

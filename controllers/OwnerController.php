@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\widgets\Alert;
 use Yii;
 use app\models\Owner;
 use yii\data\ActiveDataProvider;
@@ -10,6 +11,8 @@ use yii\web\NotFoundHttpException;
 use yii\web\ForbiddenHttpException;
 use yii\filters\VerbFilter;
 use yii\web\UploadedFile;
+use app\models\PetName;
+use app\models\OwnerPet;
 
 /**
  * OwnerController implements the CRUD actions for Owner model.
@@ -52,6 +55,7 @@ class OwnerController extends Controller
 
     public function actionIndex()
     {
+
         $dataProvider = new ActiveDataProvider([
             'query' => Owner::find(),
         ]);
@@ -71,6 +75,7 @@ class OwnerController extends Controller
     {
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'id' => $id,
         ]);
     }
 
@@ -82,7 +87,6 @@ class OwnerController extends Controller
     public function actionCreate()
     {
         $model = new Owner();
-
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->image = UploadedFile::getInstance($model, 'image');
             if($model->image){
@@ -100,6 +104,27 @@ class OwnerController extends Controller
             'model' => $model,
         ]);
     }
+   /* public function actionPetName($id)
+    {
+        $owner = Owner::findOne($id);
+
+        /*$model = new PetName();*/
+        /*echo " askjfgjadfhb";*/
+
+        /*if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            return $this->redirect(['view', 'id' => $model->id]);
+        }*/
+
+        /*$ownerpet = new OwnerPet();
+        $ownerpet->ownerId = $id;
+        $ownerpet->petId = $model->id;
+        $ownerpet->save();*/
+
+        /*return $this->redirect('petName/create', [
+            /*'model' => $model,
+            'owner' => $owner,
+        ]);
+    }*/
 
     /**
      * Updates an existing Owner model.

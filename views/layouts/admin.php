@@ -30,7 +30,7 @@ AppAsset::register($this);
     <?php
     NavBar::begin([
         'brandLabel' => 'Админ-панель',
-        'brandUrl' => ['pets/index'],
+        'brandUrl' => ['pet/index'],
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
@@ -38,7 +38,7 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Данные питомцев', 'url' => ['/pets/index']],
+            ['label' => 'Данные питомцев', 'url' => ['/pet/index']],
             ['label' => 'Данные владельцев', 'url' => ['/owner/index']],
             ['label' => 'Данные вязок', 'url' => ['/owner/index']],
             ['label' => 'Данные выставок', 'url' => ['/owner/index']],

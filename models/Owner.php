@@ -56,7 +56,7 @@ class Owner extends \yii\db\ActiveRecord
     {
         return [
             [['last_name', 'first_name', 'middle_name'], 'required'],
-            [['adres_index', 'house', 'flat', 'petsId'], 'integer'],
+            [['adres_index', 'house', 'flat'], 'integer'],
             [['date_of_entry'], 'safe'],
             [['comments'], 'string'],
             [['last_name', 'first_name', 'middle_name', 'city', 'street'], 'string', 'max' => 40],
@@ -90,9 +90,21 @@ class Owner extends \yii\db\ActiveRecord
             'cipher_in_the_breeding_factory' => 'Шифр в племенном заводе',
             'KSU_code' => 'Шифр КСУ',
             'comments' => 'Комментарии',
-            'petsId' => 'Данные о собаках',
         ];
     }
+
+   /* public function getOwnerPets()
+    {
+        return $this->hasMany(OwnerPet::className(), ['owner_id' => 'id']);
+    }
+
+    public function getPets()
+    {
+        return $this->hasMany(Pet::className(), ['id' => 'pet_id'])
+            ->via('ownerPets');
+    }*/
+
+
     public function uploadGallery(){
         if ($this->validate()){
             foreach($this->gallery as $file){
@@ -107,4 +119,12 @@ class Owner extends \yii\db\ActiveRecord
             return false;
         }
     }
+    /*public function relations()
+    {
+        return $this->moderationRelations(array(
+            'petsAll' => array(self::HAS_MANY, 'OwnerPets', 'ownerId'),
+            'petsRelation' => array(self::HAS_MANY, 'Pet', 'petsId', 'through' => 'petsAll'),
+
+        ));
+    }*/
 }

@@ -47,8 +47,6 @@ mihaildev\elfinder\Assets::noConflict($this);
     <?= $form->field($model, 'KSU_code')->textInput(['maxlength' => true]) ?>
 
     <?/*= $form->field($model, 'comments')->textarea(['rows' => 6]) */?>
-
-    <?= $form->field($model, 'petsId')->textInput() ?>
     <div class="row">
         <div class="col-md-9">
 

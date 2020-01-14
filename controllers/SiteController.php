@@ -102,7 +102,7 @@ class SiteController extends Controller
                 return $this->redirect(Url::toRoute(['admin/index']));
             }
             if($model->getUser()->accessToken === '101-token') {
-                return $this->redirect(Url::toRoute(['pets/index']));
+                return $this->redirect(Url::toRoute(['pet/index']));
             }
             else {
                 return $this->redirect(Url::toRoute(['owner/index']));

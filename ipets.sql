@@ -136,7 +136,7 @@ INSERT INTO `owner` (`id`, `last_name`, `first_name`, `middle_name`, `adres_inde
 -- --------------------------------------------------------
 
 --
--- Структура таблицы `pets`
+-- Структура таблицы `pet`
 --
 
 CREATE TABLE `pets` (
@@ -162,7 +162,7 @@ CREATE TABLE `pets` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Дамп данных таблицы `pets`
+-- Дамп данных таблицы `pet`
 --
 
 INSERT INTO `pets` (`id`, `breedId`, `name`, `colorId`, `ownerId`, `dob`, `genderId`, `pedigree_number`, `number_KSU`, `number_FCI`, `registration_club`, `breeding_club`, `comments`, `father`, `mother`, `dignityId`, `awardsId`, `puppy_card_number`, `participation_in_the_exhibition`) VALUES
@@ -231,7 +231,7 @@ ALTER TABLE `owner`
   ADD PRIMARY KEY (`id`);
 
 --
--- Индексы таблицы `pets`
+-- Индексы таблицы `pet`
 --
 ALTER TABLE `pets`
   ADD PRIMARY KEY (`id`);
@@ -283,7 +283,7 @@ ALTER TABLE `owner`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT для таблицы `pets`
+-- AUTO_INCREMENT для таблицы `pet`
 --
 ALTER TABLE `pets`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
