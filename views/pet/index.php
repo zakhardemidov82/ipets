@@ -13,23 +13,23 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Создать карточку питомца', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+    <!--<p>
+        <?/*= Html::a('Создать карточку питомца', ['create'], ['class' => 'btn btn-success']) */?>
+    </p>-->
 
 
     <?= GridView::widget([
         'dataProvider' => $dataProvider,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            /*['class' => 'yii\grid\SerialColumn'],*/
 
             /*'id',*/
-            'breedId',
-            'name',
-            'colorId',
-            'ownerId',
+            'breed',
+            'nameId',
+            'color',
+            /*'ownerId',*/
             //'dob',
-            'genderId',
+            'gender',
             //'pedigree_number',
             //'number_KSU',
             //'number_FCI',

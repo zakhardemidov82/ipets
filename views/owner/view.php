@@ -52,8 +52,6 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="">
         <?php
         $petnames = PetName::find()->where(['ownerId' => $id])->all();
-
-        /*$pets = Pet::find()->where(['ownerId' => $id])->all();*/
         echo "<p>Список собак, владельцем которых является "." ".$model->last_name.' '.$model->first_name.' '.$model->middle_name."</p>";
 
         echo "<ul>";

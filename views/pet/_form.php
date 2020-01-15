@@ -34,11 +34,11 @@ use dosamigos\datepicker\DatePicker;
             ?>
             <?= $form->field($model, 'gender')->dropDownList([
                 '0' => '',
-                '1' => 'Кобель',
-                '2' => 'Сука',
+                'Кобель' => 'Кобель',
+                'Сука' => 'Сука',
             ]); ?>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-3">
             <?= $form->field($model, 'dob')->widget(
                 DatePicker::className(), [
                 'inline' => true,
@@ -48,6 +48,9 @@ use dosamigos\datepicker\DatePicker;
                     'format' => 'yyyy-mm-dd'
                 ]
             ]);?>
+        </div>
+        <div class="col-md-3">
+        <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
         </div>
     </div>
     <div class="row hidd">
@@ -64,6 +67,8 @@ use dosamigos\datepicker\DatePicker;
             <?= $form->field($model, 'number_FCI')->textInput() ?>
         </div>
     </div>
+
+
 
     <?= $form->field($model, 'registration_club')->textInput(['maxlength' => true]) ?>
 

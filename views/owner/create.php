@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /* @var $this yii\web\View */
 /* @var $model app\models\Owner */
 
-$this->title = 'Создать карточку владельца';
+$this->title = 'Карточка владельца';
 $this->params['breadcrumbs'][] = ['label' => 'Владельцы', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>

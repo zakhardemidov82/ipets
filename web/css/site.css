@@ -9,7 +9,7 @@ body {
     margin: 0 auto -60px;
     padding: 0 0 60px;
 }
-.owner-view {
+.owner-view, .main-pet {
     width: auto;
     max-height: 250px;
     margin: auto;

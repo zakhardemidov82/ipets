@@ -3,7 +3,7 @@
 namespace app\models;
 
 use Yii;
-
+use yii\db\ActiveRecord;
 /**
  * This is the model class for table "pet".
  *
@@ -41,22 +41,24 @@ class Pet extends \yii\db\ActiveRecord
 
      public function behaviors()
     {
-    return [
-    'image' => [
-    'class' => 'rico\yii2images\behaviors\ImageBehave',
-    ]
-    ];
+        return [
+        'image' => [
+        'class' => 'rico\yii2images\behaviors\ImageBehave',
+                    ]
+                ];
     }
 
     public function rules()
     {
         return [
             [['breed', 'nameId', 'color', 'dob', 'gender', 'pedigree_number', 'number_KSU', 'number_FCI', 'registration_club', 'breeding_club', 'comments', 'puppy_card_number', 'participation_in_the_exhibition'], 'required'],
-            [['nameId', 'gender', 'pedigree_number', 'number_KSU', 'number_FCI', 'father', 'mother', 'dignityId', 'awardsId', 'puppy_card_number', 'participation_in_the_exhibition'], 'integer'],
+            [['nameId', 'pedigree_number', 'number_KSU', 'number_FCI', 'father', 'mother', 'dignityId', 'awardsId', 'puppy_card_number', 'participation_in_the_exhibition'], 'integer'],
             [['dob'], 'safe'],
             [['comments'], 'string'],
             [['registration_club', 'breed', 'color', 'breeding_club'], 'string', 'max' => 255],
             [['nameId'], 'default', 'value' => 0],
+            [['image'], 'file', 'extensions' => 'png, jpg'],
+            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 5],
         ];
     }
 
@@ -84,6 +86,7 @@ class Pet extends \yii\db\ActiveRecord
             'awardsId' => 'Награда',
             'puppy_card_number' => 'Номер щенячей карты',
             'participation_in_the_exhibition' => 'Участие в выставке',
+            'gallery' => 'Загрузить от 1 до 5 фотографий в форматах png, jpg'
         ];
     }
     /*public function getOwnerPets()

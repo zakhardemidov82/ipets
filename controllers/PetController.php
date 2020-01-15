@@ -7,9 +7,12 @@ use Yii;
 use app\models\Pet;
 use app\models\PetName;
 use yii\data\ActiveDataProvider;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Image;
+use yii\web\UploadedFile;
 
 /**
  * PetController implements the CRUD actions for Pet model.
@@ -35,7 +38,15 @@ class PetController extends Controller
      * @return mixed
      */
     public function actionIndex()
-    {
+    {/*
+        $pets = Pet::find()->asArray()->all();
+
+        $petname = PetName::find()->asArray()->all();
+
+        return $this->render('index', [
+            'pets' => $pets,
+            'petname' => $petname,
+        ]);*/
         $dataProvider = new ActiveDataProvider([
             'query' => Pet::find(),
         ]);
@@ -53,8 +64,18 @@ class PetController extends Controller
      */
     public function actionView($id)
     {
+        $images = Image::find()->where(['itemId' => $id])->all();
+        $model = $this->findModel($id);
+        $nameId = $model->nameId;
+        $petname = PetName::find()->where(['id' => $nameId])->asArray()->all();
+        $name = $petname['name'];
+        $name = $petname['0'];
+        $name = $name['name'];
         return $this->render('view', [
             'model' => $this->findModel($id),
+            'id' => $id,
+            'name' => $name,
+            'images' => $images,
         ]);
     }
 
@@ -74,14 +95,25 @@ class PetController extends Controller
             'id' => $id,
         ]);
     }
+
     public function actionCreate($id)
     {
-        $model = new Pet();
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
 
+
+        $model = new Pet();
+
+        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $model->upload();
+            }
+
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
+
+            Yii::$app->session->setFlash('success', "Профиль создан");
             return $this->redirect(['view', 'id' => $model->id]);
         }
-
 
         return $this->render('create', [
             'model' => $model,
@@ -99,7 +131,11 @@ class PetController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-        $id = $model->nameId;
+        $nameId = $model->nameId;
+        $petname = PetName::find()->where(['id' => $nameId])->asArray()->all();
+        $name = $petname['name'];
+        $name = $petname['0'];
+        $name = $name['name'];
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id]);
@@ -108,6 +144,7 @@ class PetController extends Controller
         return $this->render('update', [
             'model' => $model,
             'id' => $id,
+            'name' => $name,
         ]);
     }
 

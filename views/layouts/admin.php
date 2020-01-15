@@ -38,11 +38,11 @@ AppAsset::register($this);
     echo Nav::widget([
         'options' => ['class' => 'navbar-nav navbar-right'],
         'items' => [
-            ['label' => 'Данные питомцев', 'url' => ['/pet/index']],
-            ['label' => 'Данные владельцев', 'url' => ['/owner/index']],
-            ['label' => 'Данные вязок', 'url' => ['/owner/index']],
-            ['label' => 'Данные выставок', 'url' => ['/owner/index']],
-            ['label' => 'Данные владельцев', 'url' => ['/owner/index']],
+            ['label' => 'Владельцы', 'url' => ['/owner/index']],
+            ['label' => 'Питомцы', 'url' => ['/pet/index']],
+            ['label' => 'Вязки', 'url' => ['#']],
+            ['label' => 'Выставки', 'url' => ['#']],
+           /* ['label' => 'Данные владельцев', 'url' => ['/owner/index']],*/
             /*['label' => 'Contact', 'url' => ['/site/contact']],*/
             Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'url' => ['/site/login']]
@@ -50,7 +50,7 @@ AppAsset::register($this);
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Logout (' . Yii::$app->user->identity->username . ')',
+                    'Выход из пользователя (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
