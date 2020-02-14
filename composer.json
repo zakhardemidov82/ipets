@@ -21,7 +21,10 @@
         "2amigos/yii2-date-picker-widget": "~1.0",
         "costa-rico/yii2-images": "dev-master",
         "mihaildev/yii2-elfinder": "*",
-        "mihaildev/yii2-ckeditor": "*"
+        "mihaildev/yii2-ckeditor": "*",
+        "phpoffice/phpword": "^0.17.0",
+        "kartik-v/yii2-export": "@dev",
+        "xj/yii2-qrcode-widget": "^1.1"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

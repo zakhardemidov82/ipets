@@ -21,6 +21,7 @@ class SiteController extends Controller
     /**
      * {@inheritdoc}
      */
+    /*public $layout = 'nothing';*/
     public function behaviors()
     {
         return [
@@ -66,7 +67,7 @@ class SiteController extends Controller
      * @return string
      */
     public function actionIndex()    {
-		$this->layout = 'front'; 
+		$this->layout = 'front';
 		return $this->render('index');
     }
 
@@ -92,6 +93,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+        $this->layout = 'nothing';
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -99,13 +101,13 @@ class SiteController extends Controller
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             if($model->getUser()->accessToken === '100-token') {
-                return $this->redirect(Url::toRoute(['admin/index']));
+                return $this->redirect(Url::toRoute(['admin/super-admin-panel']));
             }
             if($model->getUser()->accessToken === '101-token') {
-                return $this->redirect(Url::toRoute(['pet/index']));
+                return $this->redirect(Url::toRoute(['admin/index', 'clubId' => 1]));
             }
             else {
-                return $this->redirect(Url::toRoute(['owner/index']));
+                return $this->redirect(Url::toRoute(['https://i-pets.club/']));
             }
         }
 

@@ -26,7 +26,7 @@
  *             // ... module initialization code goes here ...
  *         },
  *
- *         // ... other public functions and properties go here ...
+ *         // ... diplom public functions and properties go here ...
  *     };
  *
  *     // ... private functions and properties go here ...
@@ -121,7 +121,7 @@ window.yii = (function ($) {
          * the method will submit the form containing this element. If there is no containing form, a form
          * will be created and submitted using the method given by this attribute value (e.g. "post", "put").
          * For hyperlinks, the form action will take the value of the "href" attribute of the link.
-         * For other elements, either the containing form action or the current page URL will be used
+         * For diplom elements, either the containing form action or the current page URL will be used
          * as the form action URL.
          *
          * If the `data-method` attribute is not defined, the `href` attribute (if any) of the element

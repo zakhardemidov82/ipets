@@ -26,9 +26,10 @@ class PetName extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name'], 'required'],
-            [['name'], 'string', 'max' => 255],
+            [['name', 'name_trans'], 'required'],
+            [['name', 'name_trans'], 'string', 'max' => 255],
             [['ownerId'], 'default', 'value' => 0],
+            [['clubId'], 'default', 'value' => 0],
         ];
     }
 
@@ -40,7 +41,20 @@ class PetName extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Кличка собаки',
+            'name_trans' => 'Кличка транслітом',
             'ownerId' => ' ',
         ];
+    }
+    public function getPets()
+    {
+        return $this->hasMany(Pet::className(), ['nameId' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getOwner()
+    {
+        return $this->hasOne(Owner::className(), ['id' => 'ownerId']);
     }
 }

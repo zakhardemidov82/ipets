@@ -29,28 +29,28 @@ AppAsset::register($this);
 <div class="wrap">
     <?php
     NavBar::begin([
-        'brandLabel' => 'Админ-панель',
-        'brandUrl' => ['pet/index'],
+        'brandLabel' => 'Адмін-панель',
+        'brandUrl' => ['admin/index', 'clubId' => $clubId],
         'options' => [
             'class' => 'navbar-inverse navbar-fixed-top',
         ],
     ]);
     echo Nav::widget([
-        'options' => ['class' => 'navbar-nav navbar-right'],
+        'options' => ['class' => 'navbar-nav navbar-right',
+            'clubId' => $clubId,
+        ],
         'items' => [
-            ['label' => 'Владельцы', 'url' => ['/owner/index']],
-            ['label' => 'Питомцы', 'url' => ['/pet/index']],
-            ['label' => 'Вязки', 'url' => ['#']],
-            ['label' => 'Выставки', 'url' => ['#']],
-           /* ['label' => 'Данные владельцев', 'url' => ['/owner/index']],*/
-            /*['label' => 'Contact', 'url' => ['/site/contact']],*/
+            ['label' => 'Власники', 'url' => ['/owner/index','clubId' => $clubId]],
+            ['label' => 'Собаки', 'url' => ['/pet/index','clubId' => $clubId]],
+            ['label' => 'Виставки', 'url' => ['/exhibitions/index','clubId' => $clubId]],
+            ['label' => 'В\'язки', 'url' => ['#']],
             Yii::$app->user->isGuest ? (
             ['label' => 'Login', 'url' => ['/site/login']]
             ) : (
                 '<li>'
                 . Html::beginForm(['/site/logout'], 'post')
                 . Html::submitButton(
-                    'Выход из пользователя (' . Yii::$app->user->identity->username . ')',
+                    'Вихід із користувача (' . Yii::$app->user->identity->username . ')',
                     ['class' => 'btn btn-link logout']
                 )
                 . Html::endForm()
@@ -65,7 +65,7 @@ AppAsset::register($this);
         <?= Breadcrumbs::widget([
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
-        <?= Alert::widget() ?>
+        <?/*= Alert::widget() */?>
         <?= $content ?>
     </div>
 </div>

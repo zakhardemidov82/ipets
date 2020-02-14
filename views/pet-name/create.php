@@ -7,7 +7,7 @@ use yii\helpers\Html;
 
 $this->title = 'Create Pet Name';
 $this->params['breadcrumbs'][] = ['label' => 'Pet Names', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
+/*$this->params['breadcrumbs'][] = $this->title;*/
 ?>
 <div class="pet-name-create">
 

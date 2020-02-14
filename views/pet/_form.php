@@ -1,19 +1,70 @@
 <?php
-
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 use yii\helpers\ArrayHelper;
 use app\models\Breed;
 use app\models\Color;
 use dosamigos\datepicker\DatePicker;
-
-/* @var $this yii\web\View */
-/* @var $model app\models\Pet */
-/* @var $form yii\widgets\ActiveForm */
+use yii\widgets\MaskedInput;
+use yii\helpers\Inflector;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
+use app\assets\AppAsset;
+AppAsset::register($this);
 ?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php $this->registerCsrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+</head>
+<body>
+<?php $this->beginBody() ?>
+
+<div class="wrap">
+    <?php
+    NavBar::begin([
+        'brandLabel' => 'Адмін-панель',
+        'brandUrl' => ['admin/index', 'clubId' => $clubId],
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right',
+            'clubId' => $clubId,
+        ],
+        'items' => [
+            ['label' => 'Власники', 'url' => ['/owner/index','clubId' => $clubId]],
+            ['label' => 'Собаки', 'url' => ['/pet/index','clubId' => $clubId]],
+            ['label' => 'Виставки', 'url' => ['/exhibitions/index','clubId' => $clubId]],
+            ['label' => 'В\'язки', 'url' => ['#']],
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Login', 'url' => ['/site/login']]
+            ) : (
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Вихід із користувача (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
+            )
+        ],
+    ]);
+    NavBar::end();
+    ?>
 
 <div class="pet-form">
     <?php $form = ActiveForm::begin(); ?>
+    <h1><?= Html::encode($this->title) ?></h1>
     <div class="row">
         <div class="col-md-6">
             <?php
@@ -40,58 +91,86 @@ use dosamigos\datepicker\DatePicker;
         </div>
         <div class="col-md-3">
             <?= $form->field($model, 'dob')->widget(
-                DatePicker::className(), [
-                'inline' => true,
-                'template' => '<div class="well well-sm" style="background-color: #fff; width:250px">{input}</div>',
-                'clientOptions' => [
-                    'autoclose' => true,
-                    'format' => 'yyyy-mm-dd'
-                ]
+                MaskedInput::className(), [
+                'clientOptions' => ['alias' =>  'dd-mm-yyyy']
             ]);?>
         </div>
         <div class="col-md-3">
-        <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
+            <?= $form->field($model, 'gallery[]')->fileInput(['multiple' => true, 'accept' => 'image/*']) ?>
         </div>
     </div>
     <div class="row hidd">
-    <?=$form->field($model, 'nameId')->checkbox([ 'value' => $id, 'checked ' => true, 'class' => 'hidd'])->label('');?>
+        <?=$form->field($model, 'nameId')->checkbox([ 'value' => $id, 'checked ' => true, 'class' => 'hidd'])->label('');?>
+    </div>
+    <div class="row hidd">
+        <?=$form->field($model, 'ownerId')->checkbox([ 'value' => $ownerId, 'checked ' => true, 'class' => 'hidd'])->label('');?>
+    </div>
+    <div class="row hidd">
+        <?=$form->field($model, 'clubId')->checkbox([ 'value' => $clubId, 'checked ' => true, 'class' => 'hidd'])->label('');?>
     </div>
     <div class="row">
-        <div class="col-md-4">
-            <?= $form->field($model, 'pedigree_number')->textInput() ?>
+        <div class="col-md-3">
+            <?= $form->field($model, 'puppy_card_number')->textInput() ?>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <?= $form->field($model, 'number_KSU')->textInput() ?>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-3">
             <?= $form->field($model, 'number_FCI')->textInput() ?>
         </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'chip_number')->textInput() ?>
+        </div>
     </div>
-
-
-
     <?= $form->field($model, 'registration_club')->textInput(['maxlength' => true]) ?>
-
     <?= $form->field($model, 'breeding_club')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'comments')->textarea(['rows' => 6]) ?>
-
-    <?= $form->field($model, 'father')->textInput() ?>
-
-    <?= $form->field($model, 'mother')->textInput() ?>
-
-    <?= $form->field($model, 'dignityId')->textInput() ?>
-
-    <?= $form->field($model, 'awardsId')->textInput() ?>
-
-    <?= $form->field($model, 'puppy_card_number')->textInput() ?>
-
-    <?= $form->field($model, 'participation_in_the_exhibition')->textInput() ?>
-
-    <div class="form-group">
-        <?= Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+    <div class="row">
+        <div class="col-md-6">
+            <?= $form->field($model, 'comments')->textarea(['rows' => 3]) ?>
+        </div>
+        <div class="col-md-6">
+            <?= $form->field($model, 'work_certificate')->textarea(['rows' => 3]) ?>
+        </div>
     </div>
-
+    <div class="row">
+        <div class="col-md-3">
+            <?= $form->field($model, 'father')->textInput() ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'number_KSU_father')->textInput() ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <?= $form->field($model, 'mother')->textInput() ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'number_KSU_mother')->textInput() ?>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <?= $form->field($model, 'dignity')->dropDownList([
+                '0' => '',
+                'Дуже добре' => 'Дуже добре',
+                'Відмінно' => 'Відмінно',
+            ]); ?>
+        </div>
+        <div class="col-md-3">
+            <?= $form->field($model, 'participation_in_the_exhibition')->dropDownList([
+                '0' => '',
+                'Так' => 'Так',
+                'Ні' => 'Ні',
+            ]); ?>
+        </div>
+    </div>
+    <div class="form-group">
+        <?= Html::submitButton('Зберегти', ['class' => 'btn btn-success']) ?>
+    </div>
     <?php ActiveForm::end(); ?>
-
+    </div>
 </div>
+<?php $this->endBody() ?>
+</body>
+</html>
+<?php $this->endPage() ?>

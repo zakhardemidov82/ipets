@@ -7,7 +7,7 @@ use yii\grid\GridView;
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = 'Pet Names';
-$this->params['breadcrumbs'][] = $this->title;
+/*$this->params['breadcrumbs'][] = $this->title;*/
 ?>
 <div class="pet-name-index">
 

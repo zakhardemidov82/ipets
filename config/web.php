@@ -21,6 +21,7 @@ $config = [
             'graphicsLibrary' => 'GD',
             'placeHolderPath' => '@webroot/upload/store/no-image.png',
         ],
+        'gridview' => [ 'class' => 'kartik\grid\Module'],
     ],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -32,9 +33,15 @@ $config = [
             'cookieValidationKey' => '123',
 			'baseUrl' => '', 
         ],
-        /*'authManager' => [
+        'formatter' => [
+            'dateFormat' => 'dd.MM.yyyy',
+            'decimalSeparator' => ',',
+            'thousandSeparator' => ' ',
+            'currencyCode' => 'EUR',
+        ],
+        'authManager' => [
             'class' => 'yii\rbac\DbManager'
-        ],*/
+        ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
@@ -68,8 +75,8 @@ $config = [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-				'' => 'site/index',
-				'<action:home-send|test>' => 'site/<action>',
+				/*'' => 'site/index',
+				'<action:home-send|test>' => 'site/<action>',*/
             ],
         ],
      

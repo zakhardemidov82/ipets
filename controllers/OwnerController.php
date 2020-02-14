@@ -22,7 +22,7 @@ class OwnerController extends Controller
     /**
      * {@inheritdoc}
      */
-    public $layout = 'admin';
+    public $layout = false;
 
     public function behaviors()
     {
@@ -53,15 +53,17 @@ class OwnerController extends Controller
         }
     }*/
 
-    public function actionIndex()
+    public function actionIndex($clubId)
     {
-
+       /* var_dump($clubId);*/
+        $query = Owner::find()->where(['clubId' => $clubId]);
         $dataProvider = new ActiveDataProvider([
-            'query' => Owner::find(),
+            'query' => $query,
         ]);
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -73,9 +75,12 @@ class OwnerController extends Controller
      */
     public function actionView($id)
     {
+        $model = $this->findModel($id);
+        $clubId = $model['clubId'];
         return $this->render('view', [
-            'model' => $this->findModel($id),
+            'model' => $model,
             'id' => $id,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -84,7 +89,7 @@ class OwnerController extends Controller
      * If creation is successful, the browser will be redirected to the 'view' page.
      * @return mixed
      */
-    public function actionCreate()
+    public function actionCreate($clubId)
     {
         $model = new Owner();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -97,11 +102,12 @@ class OwnerController extends Controller
             $model->uploadGallery();
 
             Yii::$app->session->setFlash('success', "Профіль {$model->last_name} додан");
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'clubId' => $clubId]);
         }
 
         return $this->render('create', [
             'model' => $model,
+            'clubId' => $clubId,
         ]);
     }
    /* public function actionPetName($id)
@@ -136,7 +142,7 @@ class OwnerController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
-
+        $clubId = $model['clubId'];
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->image = UploadedFile::getInstance($model, 'image');
             if($model->image){
@@ -146,11 +152,12 @@ class OwnerController extends Controller
 
             $model->gallery = UploadedFile::getInstances($model, 'gallery');
             $model->uploadGallery();
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'clubId' => $clubId]);
         }
 
         return $this->render('update', [
             'model' => $model,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -163,9 +170,12 @@ class OwnerController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = $this->findModel($id);
+        $clubId = $model['clubId'];
+        $model->delete();
 
-        return $this->redirect(['index']);
+        return $this->redirect(['owner/index', 'clubId' => $clubId]);
+
     }
 
     /**
@@ -182,5 +192,19 @@ class OwnerController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+
+
+    public static function transliterate($string, $transliterator = null)
+    {
+        if (static::hasIntl()) {
+            if ($transliterator === null) {
+                $transliterator = static::$transliterator;
+            }
+
+            return transliterator_transliterate($transliterator, $string);
+        }
+
+        return strtr($string, static::$transliteration);
     }
 }

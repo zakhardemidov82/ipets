@@ -160,6 +160,9 @@ $this->registerMetaTag(['itemprop' => 'image', 'content' => Url::base(true).'/im
 					<li>Отчет всех участников клуба </li>
 					<li>Электронная заявка </li>
 					<li>Электронные формы </li>
+                    <li>Календарь событий </li>
+                    <li>Электронное оформление документов для вывоза собак </li>
+                    <li>Единая мед.карта собаки</li>
 				</ul>
 			</div>
 			<div class="scope-row-img" style="background-image:url(images/template/edocuments.jpg)"><span style="background:#02bdc7;"></span>

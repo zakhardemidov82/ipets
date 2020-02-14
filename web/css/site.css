@@ -2,12 +2,48 @@ html,
 body {
     height: 100%;
 }
-
+.pop_up {display: none;}
+.navbar{
+    height: 50px;
+}
+.raz {
+    width: auto;
+    padding: 5px;
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 3px;
+}
+.description{
+    width: 100%;
+    height: 60px;
+}
 .wrap {
     min-height: 100%;
     height: auto;
     margin: 0 auto -60px;
     padding: 0 0 60px;
+}
+.list{
+    margin-bottom: 10px;
+}
+.list_club{
+    color: #2c84ff;
+    font-weight: bold;
+    font-size: 18px;
+}
+.superadmin{
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn-create{
+    color: #fff;
+    background-color: #528c9d;
+    border-color: #9d9d9d;
 }
 .owner-view, .main-pet {
     width: auto;
@@ -30,7 +66,10 @@ body {
     border-top: 1px solid #ddd;
     padding-top: 20px;
 }
-
+.del{
+    width: 2%;
+    height: auto;
+}
 .jumbotron {
     text-align: center;
     background-color: transparent;
@@ -57,7 +96,58 @@ a.asc:after, a.desc:after {
     line-height: 1;
     padding-left: 5px;
 }
-
+.tab{
+    border: 1px solid #ddd;
+    background: transparent;
+    width: 100%;
+    text-align: center;
+    line-height: 1.42857143;
+}
+.report{
+     border: 1px solid grey;
+     padding: 5px;
+ }
+.tab th{
+    border: 1px solid #ddd;
+    text-align: center;
+    padding: 5px;
+}
+.tab tr{
+    border: 1px solid #ddd;
+}
+.btn-report, .btn-report:hover{
+    color: #fff;
+    background-color: #2ca02c;
+    border-color: #2ca02c;
+}
+.btn-report:hover{
+    background-color: #3e8f3e;
+    border-color: #1e7e34;
+}
+.tab td{
+    border: 1px solid #ddd;
+    padding: 5px;
+ }
+.dip{
+    width: auto;
+    max-height: 250px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.center, .diplom h2{
+   text-align: center;
+}
+.btn{
+    font-weight: bold;
+}
+.btn-view {
+    font-size: 14px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+     padding: 3px 6px;
+}
 a.asc:after {
     content: /*"\e113"*/ "\e151";
 }
@@ -90,6 +180,13 @@ a.desc:after {
     display: block;
     margin-top: 5px;
     color: #999;
+}
+.btn-own-danger{
+    color: #fff;
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    font-size: 10px;
+    padding: 3px 10px;
 }
 
 .error-summary {

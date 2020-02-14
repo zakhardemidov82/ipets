@@ -10,10 +10,11 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use yii\helpers\Url;
+/*require 'vendor/autoload/php';*/
 
 class AdminController extends Controller
 {
-    public $layout = 'admin';
+    /*public $layout = 'admin';*/
 
     public function behaviors()
     {
@@ -51,9 +52,16 @@ class AdminController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($clubId)
     {
-        return $this->render('index');
+        /*var_dump($clubId);*/
+        return $this->render('index', ['clubId' => $clubId]);
+    }
+
+    public function actionSuperAdminPanel()
+    {
+        $this->layout = 'superadmin';
+        return $this->render('super_admin');
     }
 
     public function actionLogout()

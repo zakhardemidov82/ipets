@@ -55,15 +55,17 @@ class Owner extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['last_name', 'first_name', 'middle_name'], 'required'],
-            [['adres_index', 'house', 'flat'], 'integer'],
-            [['date_of_entry'], 'safe'],
+            [['last_name', 'first_name', 'last_name_trans', 'first_name_trans', 'middle_name'], 'required'],
+            [['adres_index','passport_ID'],'integer'],
+            [['date_of_entry','date_of_issue'], 'safe'],
             [['comments'], 'string'],
-            [['last_name', 'first_name', 'middle_name', 'city', 'street'], 'string', 'max' => 40],
-            [['phone_home', 'phone_work'], 'string', 'max' => 15],
+            [['last_name', 'first_name', 'flat', 'last_name_trans', 'house', 'first_name_trans', 'middle_name', 'city', 'street', 'phone_work', 'phone_home'], 'string', 'max' => 40],
             [['email', 'site', 'cipher_in_the_breeding_factory', 'KSU_code'], 'string', 'max' => 100],
-            [['image'], 'file', 'extensions' => 'png, jpg'],
-            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 5],
+            [['issued_by'], 'string', 'max' => 255],
+            [['clubId'], 'default', 'value' => 0],
+            [['passport_series'], 'string', 'max' => 10],
+            [['image'], 'file', 'extensions' => 'png, jpg, jpeg'],
+            [['gallery'], 'file', 'extensions' => 'png, jpg, jpeg', 'maxFiles' => 10/*, 'maxSize' => 5242880*/],
         ];
     }
 
@@ -74,22 +76,25 @@ class Owner extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'last_name' => 'Фамилия',
-            'first_name' => 'Имя',
-            'middle_name' => 'Отчество',
-            'adres_index' => 'Индекс',
-            'city' => 'Город',
-            'street' => 'Улица',
-            'house' => 'Номер дома',
-            'flat' => 'Номер квартиры',
-            'phone_home' => 'Домашний телефон',
-            'phone_work' => 'Рабочий телефон',
+            'last_name' => 'Прізвище',
+            'last_name_trans' => 'Прізвище транслітом',
+            'first_name' => 'Ім\'я',
+            'first_name_trans' => 'Ім\'я транслітом',
+            'middle_name' => 'По батькові',
+            'adres_index' => 'Індекс',
+            'city' => 'Місто',
+            'street' => 'Вулиця',
+            'house' => 'Номер будинку',
+            'flat' => 'Номер квартири',
+            'phone_home' => 'Домашній телефон',
+            'phone_work' => 'Мобільний телефон',
             'email' => 'Email',
-            'site' => 'Адрес сайта',
-            'date_of_entry' => 'Дата вступления',
-            'cipher_in_the_breeding_factory' => 'Шифр в племенном заводе',
+            'site' => 'Адреса сайту',
+            'date_of_entry' => 'Дата вступу',
+            'cipher_in_the_breeding_factory' => 'Шифр у племінному заводі',
             'KSU_code' => 'Шифр КСУ',
-            'comments' => 'Комментарии',
+            'comments' => 'Коментарі',
+            'gallery' => 'Завантажити фотографії у форматі \'png\', \'jpg\' або \'jpeg\'',
         ];
     }
 

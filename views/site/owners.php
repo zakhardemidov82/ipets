@@ -4,7 +4,7 @@ use app\models\Image;
 
 $this->title = 'Владельцы
 ';
-$this->params['breadcrumbs'][] = $this->title;
+/*$this->params['breadcrumbs'][] = $this->title;*/
 ?>
 <div class="row content-one">
     <?php foreach($owners as $owner): ?>

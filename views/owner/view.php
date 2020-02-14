@@ -1,27 +1,80 @@
-<?php
 
+<?php
+use yii\widgets\ActiveForm;
+use yii\widgets\MaskedInput;
 use yii\helpers\Html;
+use yii\helpers\Inflector;
+use yii\bootstrap\Nav;
+use yii\bootstrap\NavBar;
+use yii\widgets\Breadcrumbs;
 use yii\widgets\DetailView;
 use app\models\PetName;
 use app\models\Pet;
-/* @var $this yii\web\View */
-/* @var $model app\models\Owner */
-
 $this->title = $model->last_name.' '.$model->first_name.' '.$model->middle_name;
-$this->params['breadcrumbs'][] = ['label' => 'Владельцы', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+use app\assets\AppAsset;
+AppAsset::register($this);
 ?>
+<?php $this->beginPage() ?>
+<!DOCTYPE html>
+<html lang="<?= Yii::$app->language ?>">
+<head>
+    <meta charset="<?= Yii::$app->charset ?>">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php $this->registerCsrfMetaTags() ?>
+    <title><?= Html::encode($this->title) ?></title>
+    <?php $this->head() ?>
+</head>
+<body>
+<?php $this->beginBody() ?>
+
+<div class="wrap">
+    <?php
+    NavBar::begin([
+        'brandLabel' => 'Адмін-панель',
+        'brandUrl' => ['admin/index', 'clubId' => $clubId],
+        'options' => [
+            'class' => 'navbar-inverse navbar-fixed-top',
+        ],
+    ]);
+    echo Nav::widget([
+        'options' => ['class' => 'navbar-nav navbar-right',
+            'clubId' => $clubId,
+        ],
+        'items' => [
+            ['label' => 'Власники', 'url' => ['/owner/index','clubId' => $clubId]],
+            ['label' => 'Собаки', 'url' => ['/pet/index','clubId' => $clubId]],
+            ['label' => 'Виставки', 'url' => ['/exhibitions/index','clubId' => $clubId]],
+            ['label' => 'В\'язки', 'url' => ['#']],
+            Yii::$app->user->isGuest ? (
+            ['label' => 'Login', 'url' => ['/site/login']]
+            ) : (
+                '<li>'
+                . Html::beginForm(['/site/logout'], 'post')
+                . Html::submitButton(
+                    'Вихід із користувача (' . Yii::$app->user->identity->username . ')',
+                    ['class' => 'btn btn-link logout']
+                )
+                . Html::endForm()
+                . '</li>'
+            )
+        ],
+    ]);
+    NavBar::end();
+    ?>
+    <div class="container">
+
 <div class="owner-view">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
+
     <p>
-        <?= Html::a('Изменить данные', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить карточку', ['delete', 'id' => $model->id], [
+        <?= Html::a('Змінити дані', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Видалити', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Ви впевнені, що бажаєте видалити цю картку?',
                 'method' => 'post',
             ],
         ]) ?>
@@ -30,9 +83,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <?= DetailView::widget([
         'model' => $model,
         'attributes' => [
-           /* 'id',*/
             'last_name',
+            'last_name_trans',
             'first_name',
+            'first_name_trans',
             'middle_name',
             'adres_index',
             'city',
@@ -52,12 +106,13 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="">
         <?php
         $petnames = PetName::find()->where(['ownerId' => $id])->all();
-        echo "<p>Список собак, владельцем которых является "." ".$model->last_name.' '.$model->first_name.' '.$model->middle_name."</p>";
+        echo "<p>Список собак, власником яких є "." ".$model->last_name.' '.$model->first_name.' '.$model->middle_name."</p>";
 
         echo "<ul>";
             foreach ( $petnames  as  $petname ){
+                $id = $petname['id'];
                 echo "<li>";
-                        $pets = Pet::find()->where(['nameId' => $petname])->all();
+                        $pets = Pet::find()->where(['nameId' => $id])->all();
                         foreach ( $pets  as  $pet) {
                             echo "<a href=".\yii\helpers\Url::to(['pet/view', 'id' => $pet['id']]).">".$petname['name']."</a>";
                         }
@@ -68,6 +123,13 @@ $this->params['breadcrumbs'][] = $this->title;
     </div>
 
     <p>
-    <?= Html::a('Добавить собаку', ['pet/create-name', 'id' => $model->id],  ['class' => 'btn btn-primary']) ?>
+    <?= Html::a('Додати собаку', ['pet/create-name', 'id' => $model->id, 'clubId' => $clubId,],  ['class' => 'btn btn-primary']) ?>
     </p>
 </div>
+    </div>
+</div>
+<?php $this->endBody() ?>
+</body>
+</html>
+<?php $this->endPage() ?>
+

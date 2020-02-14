@@ -70,7 +70,7 @@ class OwnerPet extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'owner_id' => 'Владелец',
+            'owner_id' => 'Власник',
             'pet_id' => 'Собака',
         ];
     }

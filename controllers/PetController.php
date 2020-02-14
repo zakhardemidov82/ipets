@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\Owner;
+use app\models\PetExhibition;
 use Yii;
 use app\models\Pet;
 use app\models\PetName;
@@ -11,15 +12,17 @@ use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\Diploma;
 use app\models\Image;
 use yii\web\UploadedFile;
+use yii\web\ForbiddenHttpException;
 
 /**
  * PetController implements the CRUD actions for Pet model.
  */
 class PetController extends Controller
 {
-    public $layout = 'admin';
+    /*public $layout = 'admin';*/
 
     public function behaviors()
     {
@@ -37,22 +40,22 @@ class PetController extends Controller
      * Lists all Pet models.
      * @return mixed
      */
-    public function actionIndex()
-    {/*
-        $pets = Pet::find()->asArray()->all();
+    public function actionIndex($clubId)
+    {
+        /*if (!Yii::$app->user->can('viewSuperAdminPage')) {
+            throw new ForbiddenHttpException('Доступ заборонено');
+        }*/
+        $pets = Pet::find()->where(['clubId' => $clubId])->asArray()->all();
+        $query = Pet::find()->where(['clubId' => $clubId]);
 
-        $petname = PetName::find()->asArray()->all();
-
-        return $this->render('index', [
-            'pets' => $pets,
-            'petname' => $petname,
-        ]);*/
         $dataProvider = new ActiveDataProvider([
-            'query' => Pet::find(),
+            'query' => $query,
         ]);
 
         return $this->render('index', [
             'dataProvider' => $dataProvider,
+            'pets' => $pets,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -66,16 +69,21 @@ class PetController extends Controller
     {
         $images = Image::find()->where(['itemId' => $id])->all();
         $model = $this->findModel($id);
+        $clubId = $model['clubId'];
         $nameId = $model->nameId;
+        $ownerId = $model['ownerId'];
+        $owner = Owner::findOne($ownerId);
         $petname = PetName::find()->where(['id' => $nameId])->asArray()->all();
-        $name = $petname['name'];
-        $name = $petname['0'];
-        $name = $name['name'];
+        foreach ($petname as $item){
+            $name = $item['name'];
+        }
         return $this->render('view', [
             'model' => $this->findModel($id),
             'id' => $id,
             'name' => $name,
             'images' => $images,
+            'owner' => $owner,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -85,39 +93,40 @@ class PetController extends Controller
      * @return mixed
      */
 
-    public function actionCreateName($id){
+    public function actionCreateName($id, $clubId){
         $model = new PetName();
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['create', 'id' => $model->id]);
+            return $this->redirect(['create', 'id' => $model->id, 'clubId' => $clubId]);
         }
         return $this->render('create_name', [
             'model' => $model,
             'id' => $id,
+            'clubId' => $clubId,
         ]);
     }
 
-    public function actionCreate($id)
+    public function actionCreate($id, $clubId)
     {
-
-
         $model = new Pet();
+        /*$diplom = new Diploma();
+        $fotoname = new Image();*/
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $model->image = UploadedFile::getInstance($model, 'image');
             if($model->image){
                 $model->upload();
             }
-
             $model->gallery = UploadedFile::getInstances($model, 'gallery');
             $model->uploadGallery();
 
             Yii::$app->session->setFlash('success', "Профиль создан");
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['view', 'id' => $model->id, 'clubId' => $clubId]);
         }
 
         return $this->render('create', [
             'model' => $model,
             'id' => $id,
+            'clubId' => $clubId,
         ]);
     }
 
@@ -131,37 +140,54 @@ class PetController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $clubId = $model['clubId'];
         $nameId = $model->nameId;
         $petname = PetName::find()->where(['id' => $nameId])->asArray()->all();
-        $name = $petname['name'];
-        $name = $petname['0'];
-        $name = $name['name'];
+        foreach ($petname as $item){
+            $name = $item['name'];
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $model->image = UploadedFile::getInstance($model, 'image');
+            if($model->image){
+                $model->upload();
+            }
+            $model->gallery = UploadedFile::getInstances($model, 'gallery');
+            $model->uploadGallery();
+
+            return $this->redirect(['view', 'id' => $model->id, 'clubId' => $clubId]);
         }
 
         return $this->render('update', [
             'model' => $model,
             'id' => $id,
             'name' => $name,
+            'nameId' => $nameId,
+            'clubId' => $clubId,
         ]);
     }
 
-    /**
-     * Deletes an existing Pet model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
+
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+            $model = Pet::findOne($id);
+            $clubId = $model['clubId'];
+            $idName = PetName::findOne($model['nameId'])->delete();
+            $model->delete();
 
-        return $this->redirect(['index']);
+            return $this->redirect(['pet/index', 'clubId' => $clubId]);
+        }
+
+    public function actionDeleteEx($id,$exid)
+    {
+
+        $model = Pet::findOne($id);
+        $idEx = PetExhibition::find()->where(['petId' => $model['nameId'], 'exhibitionId' => $exid])->all();
+        foreach ($idEx as $item){
+            $item->delete();
+        }
+        return $this->redirect(['exhibitions/view', 'id' => $exid]);
     }
-
     /**
      * Finds the Pet model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.

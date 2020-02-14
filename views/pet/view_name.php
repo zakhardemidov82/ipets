@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use yii\helpers\Html;
 use yii\widgets\DetailView;
@@ -7,8 +7,6 @@ use yii\widgets\DetailView;
 /* @var $model app\models\Pet */
 
 $this->title = $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Pet', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
 \yii\web\YiiAsset::register($this);
 ?>
 <div class="pets-view">
@@ -16,11 +14,11 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Изменить данные', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Удалить карточку', ['delete', 'id' => $model->id], [
+        <?= Html::a('Змінити дані', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
+        <?= Html::a('Видалити картку', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => 'Are you sure you want to delete this item?',
+                'confirm' => 'Ви впевнені, що бажаєте видалити цю інформацію?',
                 'method' => 'post',
             ],
         ]) ?>

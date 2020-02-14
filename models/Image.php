@@ -22,6 +22,7 @@ class Image extends \yii\db\ActiveRecord
             [['isMain'], 'string', 'max' => 1],
             [['modelName'], 'string', 'max' => 150],
             [['name'], 'string', 'max' => 80],
+            [['itemId'], 'default', 'value' => 0],
         ];
     }
 
@@ -35,7 +36,7 @@ class Image extends \yii\db\ActiveRecord
             'isMain' => 'Is Main',
             'modelName' => 'Model Name',
             'urlAlias' => 'Url Alias',
-            'name' => 'Name',
+            'name' => 'Название фото',
         ];
     }
 }

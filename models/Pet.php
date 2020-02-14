@@ -38,75 +38,69 @@ class Pet extends \yii\db\ActiveRecord
     }
     public $image;
     public $gallery;
-
-     public function behaviors()
+    public function behaviors()
     {
         return [
-        'image' => [
-        'class' => 'rico\yii2images\behaviors\ImageBehave',
-                    ]
-                ];
+            'image' => [
+                'class' => 'rico\yii2images\behaviors\ImageBehave',
+            ]
+        ];
     }
 
     public function rules()
     {
         return [
-            [['breed', 'nameId', 'color', 'dob', 'gender', 'pedigree_number', 'number_KSU', 'number_FCI', 'registration_club', 'breeding_club', 'comments', 'puppy_card_number', 'participation_in_the_exhibition'], 'required'],
-            [['nameId', 'pedigree_number', 'number_KSU', 'number_FCI', 'father', 'mother', 'dignityId', 'awardsId', 'puppy_card_number', 'participation_in_the_exhibition'], 'integer'],
+            [['breed', 'nameId', 'color', 'dob', 'gender', 'number_KSU', 'number_FCI', 'registration_club', 'breeding_club',/* 'comments', 'puppy_card_number',
+                'participation_in_the_exhibition'*/], 'required'],
+            [['nameId','ownerId',  /*'father', 'mother', 'dignityId', 'awardsId', 'puppy_card_number', 'participation_in_the_exhibition'*/], 'integer'],
             [['dob'], 'safe'],
             [['comments'], 'string'],
-            [['registration_club', 'breed', 'color', 'breeding_club'], 'string', 'max' => 255],
+            [['registration_club', 'father', 'mother','breed', 'color', 'breeding_club', 'work_certificate'], 'string', 'max' => 255],
+            [['number_KSU', 'number_FCI','puppy_card_number', 'number_KSU_father', 'number_KSU_mother','chip_number','dignity'], 'string', 'max' => 40],
+            [['participation_in_the_exhibition'], 'string', 'max' => 10],
             [['nameId'], 'default', 'value' => 0],
-            [['image'], 'file', 'extensions' => 'png, jpg'],
-            [['gallery'], 'file', 'extensions' => 'png, jpg', 'maxFiles' => 5],
+            [['ownerId'], 'default', 'value' => 0],
+            [['clubId'], 'default', 'value' => 0],
+            [['image'], 'file', 'extensions' => 'png, jpg, jpeg'],
+            [['gallery'], 'file', 'extensions' => 'png, jpg, jpeg', 'maxFiles' =>2],
         ];
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function attributeLabels()
     {
         return [
             'id' => 'ID',
             'breed' => 'Порода',
             'nameId' => 'Кличка',
+            'ownerId' => 'Власник',
             'color' => 'Окрас',
-            'dob' => 'Дата рождения',
+            'dob' => 'Дата народження',
             'gender' => 'Пол',
-            'pedigree_number' => 'Номер родословной',
-            'number_KSU' => 'Номер КСУ',
-            'number_FCI' => 'Номер FCI',
-            'registration_club' => 'Клуб регистрации',
-            'breeding_club' => 'Клуб разведения',
-            'comments' => 'Комментарии',
-            'father' => 'Отец',
-            'mother' => 'Мать',
-            'dignityId' => 'Титул',
-            'awardsId' => 'Награда',
-            'puppy_card_number' => 'Номер щенячей карты',
-            'participation_in_the_exhibition' => 'Участие в выставке',
-            'gallery' => 'Загрузить от 1 до 5 фотографий в форматах png, jpg'
+            'number_KSU' => 'Номер родоводу КСУ',
+            'number_FCI' => 'Номер родоводу FCI',
+            'chip_number' => 'Номер чипу',
+            'registration_club' => 'Клуб реєстрації',
+            'breeding_club' => 'Клуб розведення',
+            'comments' => 'Коментарі',
+            'number_KSU_father' => 'Номер родоводу КСУ батька',
+            'number_KSU_mother' => 'Номер родоводу КСУ матері',
+            'father' => 'Батько',
+            'mother' => 'Мати',
+            'dignity' => 'Титул',
+            'puppy_card_number' => 'Номер щенячої карти',
+            'participation_in_the_exhibition' => 'Участь у виставці',
+            'gallery' => 'Завантажити фотографію у форматі \'png\', \'jpg\' або \'jpeg\'',
+            'work_certificate' => 'Робочий сертифікат',
         ];
     }
-    /*public function getOwnerPets()
+    public function getName()
     {
-        return $this->hasMany(OwnerPet::className(), ['pet_id' => 'id']);
+        return $this->hasOne(PetName::className(), ['id' => 'nameId']);
     }
-
-    public function getOwners()
+    public function getOwner()
     {
-        return $this->hasMany(Owner::className(), ['id' => 'item_id'])
-            ->via('ownerPets');
-    }*/
-    /*public function relations()
-    {
-        return $this->moderationRelations(array(
-            'ownerAll' => array(self::HAS_MANY, 'OwnerPets', 'petsId'),
-            'ownerRelation' => array(self::HAS_MANY, 'Owner', 'ownerId', 'through' => 'ownerAll'),
-
-        ));
-    }*/
+        return $this->hasOne(Owner::className(), ['id' => 'ownerId']);
+    }
     public function uploadGallery(){
         if ($this->validate()){
             foreach($this->gallery as $file){
